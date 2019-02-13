@@ -8,6 +8,7 @@
 * As a developer I want documentation so that I can construct a properly planned project -Jin
 * As a developer I want units test so that I can do regression testing later - Jorge
 * As a developer I want easy form of communication and data sharing so I can collaborate with my team - Tony
+* As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. - Tony 
 * As a player I want to have a challenging and new crossword crossword puzzle so that I never get the same puzzle too often -Jin
 * As a player I want a list of hints so that I can guess the correct word - Jorge
 * As a player I want the puzzle to load within 5 seconds - Tony
@@ -17,6 +18,10 @@
 * As a player I want a percentage of right answers so that I can show my friends and compare scores - Jorge
 * As a player I want to see the correct and completed board after submitting so that I can learn new words - Jin
 * As a player I want to save my progress so that I can continue playing later - Jin
+* As a player I want to undo my wrong answer so that I can try to enter the right asnwer. - Tony
+* As a player I want to be able to rate the crossword puzzle ;evel to show my enjoyment. - Tony 
+
+
 
 ## Requirements [6 point]
 * Must accessible via web browser
