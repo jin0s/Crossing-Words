@@ -12,6 +12,9 @@
 * As a player I want a list of hints so that I can guess the correct word - Jorge
 * As a player I want the puzzle to load within 5 seconds - Tony
 * As a player I want to be able to access the crossword anywhere so that I can play - Jin
+* As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. - Jorge
+* As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong - Jorge
+* As a player I want a percentage of right answers so that I can show my friends and compare scores - Jorge
 
 ## Requirements [6 point]
 * Must accessible via web browser
