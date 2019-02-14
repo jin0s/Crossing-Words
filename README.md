@@ -8,7 +8,7 @@
 * As a developer I want documentation so that I can construct a properly planned project -Jin
 * As a developer I want units test so that I can do regression testing later - Jorge
 * As a developer I want easy form of communication and data sharing so I can collaborate with my team - Tony
-* As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. - Tony 
+* As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. - Tony
 * As a player I want to have a challenging and new crossword crossword puzzle so that I never get the same puzzle too often -Jin
 * As a player I want a list of hints so that I can guess the correct word - Jorge
 * As a player I want the puzzle to load within 5 seconds - Tony
@@ -19,7 +19,7 @@
 * As a player I want to see the correct and completed board after submitting so that I can learn new words - Jin
 * As a player I want to save my progress so that I can continue playing later - Jin
 * As a player I want to undo my wrong answer so that I can try to enter the right asnwer. - Tony
-* As a player I want to be able to rate the crossword puzzle ;evel to show my enjoyment. - Tony 
+* As a player I want to be able to rate the crossword puzzle ;evel to show my enjoyment. - Tony
 
 
 
@@ -30,7 +30,15 @@
 * Set up node.js server to host the crossword puzzle
 * Draft up UI design
 * Have list of API calls
-
+* Must set up tests for most functions
+* Must produce a list of hints
+* Must show the list of hints to the User
+* Hints must match the Words
+* Must have a place to enter the answers
+* Turn the hints red if the player has guessed incorrectly
+* Must have a button to have the player test
+* Must find out how many words the player has gotten correct
+* Must show the percentage to the player
 ## Sprint Backlog [5 points]
 
 ## Burndown Chart [2 points]
