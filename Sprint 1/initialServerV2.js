@@ -3,6 +3,7 @@ var http = require('http');
 var fs = require('fs');
 var htmlFile;
 var cssFile;
+var jsFile;
 
 fs.readFile('./index.html', function(err, data) {
     if (err){
@@ -18,11 +19,22 @@ fs.readFile('./index.css', function(err, data) {
     cssFile = data;
 });
 
+fs.readFile('./index.js', function(err, data) {
+    if (err){
+        throw err;
+    }
+    jsFile = data;
+});
+
 var server = http.createServer(function (request, response) {
     switch (request.url) {
         case "/index.css" :
             response.writeHead(200, {"Content-Type": "text/css"});
             response.write(cssFile);
+            break;
+       case "/index.js" :
+            response.writeHead(200, {"Content-Type": "text/js"});
+            response.write(jsFile);
             break;
         default :    
             response.writeHead(200, {"Content-Type": "text/html"});
