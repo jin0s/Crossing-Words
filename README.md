@@ -38,7 +38,6 @@
 * Must have a button to have the player test
 * Must find out how many words the player has gotten correct
 * Must show the percentage to the player
-* As a developer I want documentation so that I can construct a properly planned project -Jin
 * There must be vision statements, user stories, requirements, product backlogs, sprint backlogs, burndown chart
 * There must be a common repository that include everyone's notes and research
 * Generate the crossword puzzle from a database of thousands of words and hint pairs
