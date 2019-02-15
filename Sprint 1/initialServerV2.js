@@ -20,7 +20,7 @@ fs.readFile('./index.css', function(err, data) {
 
 var server = http.createServer(function (request, response) {
     switch (request.url) {
-        case "/AppClientStyle.css" :
+        case "/index.css" :
             response.writeHead(200, {"Content-Type": "text/css"});
             response.write(cssFile);
             break;
