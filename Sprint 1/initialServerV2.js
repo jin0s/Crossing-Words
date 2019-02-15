@@ -27,6 +27,7 @@ var server = http.createServer(function (request, response) {
         default :    
             response.writeHead(200, {"Content-Type": "text/html"});
             response.write(htmlFile);
+    }
     });
     response.end();
 }
