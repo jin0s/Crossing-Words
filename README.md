@@ -19,8 +19,7 @@
 * As a player I want to see the correct and completed board after submitting so that I can learn new words - Jin
 * As a player I want to save my progress so that I can continue playing later - Jin
 * As a player I want to undo my wrong answer so that I can try to enter the right asnwer. - Tony
-* As a player I want to be able to rate the crossword puzzle ;evel to show my enjoyment. - Tony
-
+* As a player I want to be able to rate the crossword puzzle level to show my enjoyment. - Tony
 
 
 ## Requirements [6 point]
@@ -39,6 +38,24 @@
 * Must have a button to have the player test
 * Must find out how many words the player has gotten correct
 * Must show the percentage to the player
+* As a developer I want documentation so that I can construct a properly planned project -Jin
+* There must be vision statements, user stories, requirements, product backlogs, sprint backlogs, burndown chart
+* There must be a common repository that include everyone's notes and research
+* Generate the crossword puzzle from a database of thousands of words and hint pairs
+* There must be a server that will host the crossword
+* Developers must have access to the server in order to restart and deploy the game
+* The server must be up 95% of the time and must be accessible during the demonstration
+* There must be a button to show the answer, but only be available after the player submits his answers
+* After clicking the show answer the correct board will be displayed
+* The correct board must be displayed until the player clicks new game
+* There must be a button to save the game
+* The game will not save by default
+* When the player reloads the game he is presented with the option to either start a new game or continue
+* If the player selects new game, a new board will be generated
+* If the player selects continue, the game will load all of the previous entries
+
+
+
 ## Sprint Backlog [5 points]
 
 ## Burndown Chart [2 points]
