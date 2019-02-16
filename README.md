@@ -89,6 +89,7 @@ v10.15.1
 poops@raspberrypi:~/Crossing-Words $ npm --version
 6.4.1
 ```
+* Mockup in the Sprint1 folder
 
 ## Code [3 points]
 
