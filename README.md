@@ -63,7 +63,7 @@
 |As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|When a player access the website the design of the UI should be easy to navigate.|Not Started|
 |As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
 |As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
-|As a player I want the puzzle to load within 5 seconds |9|LOW|-----|-----|
+|As a player I want the puzzle to load within 5 seconds |9|LOW|When the player access the url with a web-browser the page should load within 5 seconds|Not Started|
 |As a player I want to be able to access the crossword so that I can play |8|HIGH| The crossword must be accessible via web-browser and the Internet. There must be a server that will host the crossword. Developers must have access to the server in order to restart and deploy the game. The server must be up 95% of the time and must be accessible during the demonstration. |Done|
 |As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
 |As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
