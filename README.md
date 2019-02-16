@@ -59,7 +59,11 @@
 |------------|--------|----------|---------------------|--------|
 |As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
 |As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
+<<<<<<< HEAD
 |As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing..|Done|
+=======
+|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID| As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing.|Done|
+>>>>>>> 146eb1553efdd1aefcdc33f035f69e80af3605a4
 |As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|When a player access the website the design of the UI should be easy to navigate.|Not Started|
 |As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
 |As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
