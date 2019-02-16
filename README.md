@@ -9,16 +9,16 @@
 * As a developer I want units test so that I can do regression testing later - Jorge
 * As a developer I want easy form of communication and data sharing so I can collaborate with my team - Tony
 * As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. - Tony
-* As a player I want to have a challenging and new crossword crossword puzzle so that I never get the same puzzle too often -Jin
+* As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often -Jin
 * As a player I want a list of hints so that I can guess the correct word - Jorge
 * As a player I want the puzzle to load within 5 seconds - Tony
 * As a player I want to be able to access the crossword anywhere so that I can play - Jin
 * As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. - Jorge
 * As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong - Jorge
 * As a player I want a percentage of right answers so that I can show my friends and compare scores - Jorge
-* As a player I want to see the correct and completed board after submitting so that I can learn new words - Jin
+* As a player I want to see the completed board/correct solutions after submitting so that I can learn new words - Jin
 * As a player I want to save my progress so that I can continue playing later - Jin
-* As a player I want to undo my wrong answer so that I can try to enter the right asnwer. - Tony
+* As a player I want to undo my wrong answer so that I can try to enter the right answers. - Tony
 * As a player I want to be able to rate the crossword puzzle level to show my enjoyment. - Tony
 
 
@@ -41,7 +41,7 @@
 * There must be vision statements, user stories, requirements, product backlogs, sprint backlogs, burndown chart
 * There must be a common repository that include everyone's notes and research
 * Generate the crossword puzzle from a database of thousands of words and hint pairs
-* There must be a server that will host the crossword
+* The crossword must be accessible via web-browser and the Internet.
 * Developers must have access to the server in order to restart and deploy the game
 * The server must be up 95% of the time and must be accessible during the demonstration
 * There must be a button to show the answer, but only be available after the player submits his answers
@@ -57,20 +57,20 @@
 
 | User Story | Estimate | Priority | Validation Requirement | Status |
 |------------|--------|----------|---------------------|--------|
-|As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart|DONE|
+|As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
 |As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
 |As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|-----|-----|
 |As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|-----|-----|
-|As a player I want to have a challenging and new crossword crossword puzzle so that I never get the same puzzle too often |20|HIGH|-----|-----|
+|As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
 |As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
 |As a player I want the puzzle to load within 5 seconds |9|LOW|-----|-----|
-|As a player I want to be able to access the crossword so that I can play |8|HIGH|-----|-----|
+|As a player I want to be able to access the crossword so that I can play |8|HIGH| The crossword must be accessible via web-browser and the Internet. There must be a server that will host the crossword. Developers must have access to the server in order to restart and deploy the game. The server must be up 95% of the time and must be accessible during the demonstration. |-----|
 |As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
 |As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
 |As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW|-----|-----|
-|As a player I want to see the correct and completed board after submitting so that I can learn new words |3|LOW|Everytime the player checks their crossword there should be an amount of percent correct/ total |Not Started|
-|As a player I want to save my progress so that I can continue playing later |4|LOW|-----|-----|
-|As a player I want to undo my wrong answer so that I can try to enter the right asnwer. |3|MID|-----|-----|
+|As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
+|As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
+|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|-----|-----|
 |As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|-----|-----|
 
 ## Sprint Backlog [5 points]
