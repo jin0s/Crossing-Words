@@ -58,17 +58,17 @@
 | User Story | Estimate | Priority | Validation Requirement | Status |
 |------------|--------|----------|---------------------|--------|
 |As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart|DONE|
-|As a developer I want units test so that I can do regression testing later |10|HIGH|-----|-----|
+|As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
 |As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|-----|-----|
 |As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|-----|-----|
 |As a player I want to have a challenging and new crossword crossword puzzle so that I never get the same puzzle too often |20|HIGH|-----|-----|
-|As a player I want a list of hints so that I can guess the correct word |5|HIGH|-----|-----|
+|As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
 |As a player I want the puzzle to load within 5 seconds |9|LOW|-----|-----|
 |As a player I want to be able to access the crossword so that I can play |8|HIGH|-----|-----|
-|As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|-----|-----|
-|As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|-----|-----|
+|As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
+|As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
 |As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW|-----|-----|
-|As a player I want to see the correct and completed board after submitting so that I can learn new words |3|LOW|-----|-----|
+|As a player I want to see the correct and completed board after submitting so that I can learn new words |3|LOW|Everytime the player checks their crossword there should be an amount of percent correct/ total |Not Started|
 |As a player I want to save my progress so that I can continue playing later |4|LOW|-----|-----|
 |As a player I want to undo my wrong answer so that I can try to enter the right asnwer. |3|MID|-----|-----|
 |As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|-----|-----|
