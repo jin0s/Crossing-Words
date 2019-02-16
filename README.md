@@ -55,27 +55,24 @@
 
 ## Product Backlog [5 points]
 
-|ID|| User Story | Estimate | Priority | Validation Requirement | Status |
+| User Story | Estimate | Priority | Validation Requirement | Status |
 |------------|--------|----------|---------------------|--------|
-|01||As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
-|02||As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
-<<<<<<< HEAD
-|03||As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing..|Done|
-=======
-|04||As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID| As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing.|Done|
->>>>>>> 146eb1553efdd1aefcdc33f035f69e80af3605a4
-|05||As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|When a player access the website the design of the UI should be easy to navigate.|Not Started|
-|06||As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
-|07||As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
-|08||As a player I want the puzzle to load within 5 seconds |9|LOW|When the player access the url with a web-browser the page should load within 5 seconds|Not Started|
-|09||As a player I want to be able to access the crossword so that I can play |8|HIGH| The crossword must be accessible via web-browser and the Internet. There must be a server that will host the crossword. Developers must have access to the server in order to restart and deploy the game. The server must be up 95% of the time and must be accessible during the demonstration. |Done|
-|10||As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
-|11||As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
-|12||As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW||Everytime the player finish a game an amount of percent of correct should display on the player screen.|Not Started|
-|13||As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
-|14||As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
-|15||As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checkes their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
-|16||As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player has finish a pop up alert will display with an option to rate the game|Not Started|
+|As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
+|As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
+|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing..|Done|
+|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID| As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing.|Done|
+|As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|When a player access the website the design of the UI should be easy to navigate.|Not Started|
+|As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
+|As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
+|As a player I want the puzzle to load within 5 seconds |9|LOW|When the player access the url with a web-browser the page should load within 5 seconds|Not Started|
+|As a player I want to be able to access the crossword so that I can play |8|HIGH| The crossword must be accessible via web-browser and the Internet. There must be a server that will host the crossword. Developers must have access to the server in order to restart and deploy the game. The server must be up 95% of the time and must be accessible during the demonstration. |Done|
+|As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
+|As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
+|As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW||Everytime the player finish a game an amount of percent of correct should display on the player screen.|Not Started|
+|As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
+|As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
+|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checkes their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
+|As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player has finish a pop up alert will display with an option to rate the game|Not Started|
 
 ## Sprint Backlog [5 points]
 * https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
