@@ -70,7 +70,7 @@
 |As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW|-----|-----|
 |As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
 |As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
-|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|-----|-----|
+|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checkes their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
 |As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|-----|-----|
 
 ## Sprint Backlog [5 points]
