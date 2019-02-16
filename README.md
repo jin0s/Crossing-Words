@@ -96,3 +96,5 @@ poops@raspberrypi:~/Crossing-Words $ npm --version
 ## Tests [3 point]
 
 ## Demonstration [10 point]
+
+This is a link to our Youtube video showing our server up and running our code: https://www.youtube.com/watch?v=nxk0t8i9fRQ
