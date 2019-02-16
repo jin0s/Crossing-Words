@@ -59,8 +59,8 @@
 |------------|--------|----------|---------------------|--------|
 |As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
 |As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
-|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|-----|-----|
-|As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|-----|-----|
+|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|A developer should have access to software tools as a form to help communicate with other developer.|Done|
+|As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|When a player access the website the design of the UI should be easy to navigate.|Not Started|
 |As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
 |As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
 |As a player I want the puzzle to load within 5 seconds |9|LOW|-----|-----|
@@ -71,7 +71,7 @@
 |As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
 |As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
 |As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checkes their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
-|As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|-----|-----|
+|As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player has finish a pop up alert will display with an option to rate the game|Not Started|
 
 ## Sprint Backlog [5 points]
 
