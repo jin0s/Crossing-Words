@@ -74,6 +74,7 @@
 |As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player has finish a pop up alert will display with an option to rate the game|Not Started|
 
 ## Sprint Backlog [5 points]
+* https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
 
 ## Burndown Chart [2 points]
 
