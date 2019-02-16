@@ -59,24 +59,25 @@
 |---|------------|--------|----------|---------------------|--------|
 |01|As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
 |02|As a developer I want units test so that I can do regression testing later |10|HIGH|For every function we should have either a manual or automatic test associated with it |Not Started|
-|03|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|As a team, Define what tools to use for text-based and voice-based communcation. Define what tools to use for version control. Define what tools to use for file sharing..|Done|
+|03|As a developer I want easy form of communication and data sharing so I can collaborate with my team |2|MID|As a team, Define what tools to use for text-based and voice-based communication. Define what tools to use for version control. Define what tools to use for file sharing.|Done|
 |04|As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. |8|MID|Developers should have a mockup design to use as a draft |Not Started|
 |05|As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often |20|HIGH| Generate the crossword puzzle from a database of thousands of words and hint pairs, when calling the python backend API to generated the puzzle, it should return plain text file that has the 2-d array. |In Progress|
 |06|As a player I want a list of hints so that I can guess the correct word |5|HIGH|There should be a display of hints to the player on the website. The hints should correspond with the crossword words |Not Started|
-|07|As a player I want the puzzle to load within 5 seconds |9|LOW|Create a dedicated test enviornment for load testing to determine the load time.|Not Started|
+|07|As a player I want the puzzle to load within 5 seconds |9|LOW|Create a dedicated test environment for load testing to determine the load time.|Not Started|
 |08|As a player I want to be able to access the crossword so that I can play |8|HIGH| The crossword must be accessible via web-browser and the Internet. There must be a server that will host the crossword. Developers must have access to the server in order to restart and deploy the game. The server must be up 95% of the time and must be accessible during the demonstration. |Done|
 |09|As a player I want to be able to enter my answer to a crossword puzzle so that I can play the game. |4|HIGH|There should be blocks for players to enter letters. |Not Started|
 |10|As a player I want to have pointed out my mistakes so that I know which words I have gotten wrong |6|MID|Incorrect words should show in red for the players to know which ones are wrong. |Not Started|
 |11|As a player I want a percentage of right answers so that I can show my friends and compare scores |6|LOW|Everytime the player finish a game an stdout will display with correct/total.|Not Started|
 |12|As a player I want to see the completed board/correct answers after submitting so that I can learn new words |3|LOW| Everytime the player checks their crossword there should be an amount of percent correct/ total. When the user decides to give up, there will be a button to show all of the solutions |Not Started|
 |13|As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
-|14|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checkes their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
+|14|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checks their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
 |15|As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player finish a game a stdout display will give an option to rate the level.|Not Started|
 
 ## Sprint Backlog [5 points]
 * https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
 
 ## Burndown Chart [2 points]
+* https://docs.google.com/spreadsheets/d/1O6-5PgWYNVYqPI3yn2iEwXZJWgYm1r5lbdo5Slb988c/edit#gid=0
 
 ## Design Documents [3 points]
 * The website is hosted on a Raspberry Pi on Jin's Home Network. In order to gain SSH access to the server, the developer's need to send Jin a public RSA key.
