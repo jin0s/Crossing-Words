@@ -34,6 +34,8 @@
   * The entire grid must be interconnected, i.e. not disjoint
   * Every square must be "checked": part of both a down and an across word
   * The (empty) grid must be rotationally symmetric: can be rotated 180 degrees and remain identical.
+* The probability of any pair of randomly generated crosswords sharing a clue should be less than 50%
+* The probability of any pair of randomly generated crosswords sharing similar structure (>50% match of black tiles) should be less than 10%
 * Product Backlog [5 points]
 * Set up node.js server to host the crossword puzzle
 * Draft up UI design
