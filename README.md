@@ -9,12 +9,7 @@
 * As a developer I want units test so that I can do regression testing later - Jorge
 * As a developer I want easy form of communication and data sharing so I can collaborate with my team - Tony
 * As a developer I want a clean UI so that my players can play the crossword puzzle game with easy of use. - Tony
-* As a developer I want a fast, clean way to verify that a word is in the clue repository, so that puzzle validation is simple to accomplish. - Steven
-* As a developer I want a clean way to export randomly generated crosswords into a consistent format to be used. - Steven
 * As a player I want to have a challenging and new crossword puzzle so that I never get the same puzzle too often -Jin
-* As a player I want the crosswords to not be too similar to crosswords I have played before, with hints not often reused. - Steven
-* As a player I want to have the crossword puzzles follow the same format as other common crosswords puzzles, such as the NYT daily crossword. - Steven
-* As a player I want the structure of the crossword to vary, such that the board feels different everytime I play - Steven
 * As a player I want a list of hints so that I can guess the correct word - Jorge
 * As a player I want the puzzle to load within 5 seconds - Tony
 * As a player I want to be able to access the crossword anywhere so that I can play - Jin
@@ -25,7 +20,11 @@
 * As a player I want to save my progress so that I can continue playing later - Jin
 * As a player I want to undo my wrong answer so that I can try to enter the right answers. - Tony
 * As a player I want to be able to rate the crossword puzzle level to show my enjoyment. - Tony
-
+* As a developer I want a fast, clean way to verify that a word is in the clue repository, so that puzzle validation is simple to accomplish. - Steven
+* As a developer I want a clean way to export randomly generated crosswords into a consistent format to be used. - Steven
+* As a player I want to have the crossword puzzles follow the same format as other common crosswords puzzles, such as the NYT daily crossword. - Steven
+* As a player I want the crosswords to not be too similar to crosswords I have played before, with hints not often reused. - Steven
+* As a player I want the structure of the crossword to vary, such that the board feels different everytime I play - Steven
 
 ## Requirements [6 point]
 * Must accessible via web browser
@@ -82,7 +81,11 @@
 |13|As a player I want to save my progress so that I can continue playing later |4|LOW| If the web-browser gets closed, or the user leave the site, The game should present the option to either start a new game or continue from the previous game |Not Started|
 |14|As a player I want to undo my wrong answer so that I can try to enter the right answer. |3|MID|Everytime the player checks their crossword there should be an option to backspace their current answer, so they can type in another answer.|Not Started|
 |15|As a player I want to be able to rate the crossword puzzle level to show my enjoyment. |2|LOW|When the player finish a game a stdout display will give an option to rate the level.|Not Started|
-
+|16|As a developer I want a fast, clean way to verify that a word is in the clue repository, so that puzzle validation is simple to accomplish|7|MID|Verification that a word is in the repository should take under 15ms|In Progress|
+|17|As a developer I want a clean way to export randomly generated crosswords into a consistent format to be used.|3|HIGH|The Crossword generator should output its results to a txt file in an agreed upon format|In Progress|
+|18|As a player I want to have the crossword puzzles follow the same format as other common crosswords puzzles, such as the NYT daily crossword|7|HIGH|The crossword should follow NYT conventions, meaning no words under 3 characters, rotational symmetry, and a fully interconnected, checked board|Not Started|
+|19|As a player I want the crosswords to not be too similar to crosswords I have played before, with hints not often reused.|4|LOW|The odds of two crosswords having an identical clue should be less than 50%|Not Started|
+|20|As a player I want the structure of the crossword to vary, such that the board feels different everytime I play|6|LOW|The odds of two crosswords having more than a 50% match of black (empty) squares should be under 10%|Not Started|
 ## Sprint Backlog [5 points]
 * https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
 
