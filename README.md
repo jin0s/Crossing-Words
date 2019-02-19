@@ -112,6 +112,23 @@ poops@raspberrypi:~/Crossing-Words $ npm --version
 ## Code [3 points]
 
 ## Tests [3 point]
+* To run pytest: Navigate the the Sprint 1 Folder and enter:
+```
+jin@XPS15z:~/Documents/Crossing-Words$ cd Sprint\ 1/
+jin@XPS15z:~/Documents/Crossing-Words/Sprint 1$ python3 -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.6.7, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/jin/Documents/Crossing-Words/Sprint 1, inifile:
+plugins: pylama-7.4.3
+collected 3 items                                                              
+
+test/test_crossword.py::test_init_Clue PASSED                            [ 33%]
+test/test_mathlib.py::test_calc_total PASSED                             [ 66%]
+test/test_mathlib.py::test_calc_multiply PASSED                          [100%]
+
+=========================== 3 passed in 0.13 seconds ===========================                     
+```
 
 ## Demonstration [10 point]
 
