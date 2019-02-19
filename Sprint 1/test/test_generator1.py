@@ -1,3 +1,7 @@
+'''
+Unit test for generate function in generator.py
+'''
+
 from src import generator
 
 def test_generate():

@@ -1,3 +1,7 @@
+'''
+Unit test of trie.py functions
+'''
+
 from src import trie
 
 t = trie.Trie();
