@@ -1,10 +1,9 @@
 # POOPs
 
-## Vision Statement [7 points]
-* Create a crossword puzzle generator for anyone who wants to kill time, or fancy crossword puzzle enthusiast
-* Like words with friends but without the friend because its solo
+## Vision Statement
+Crossing Words is a crossword puzzle game that will generate a new crossword from a dataset of know word:hint pairs. It is needed by anyone who wants to escape from their stressful thoughts and engage in extending their vocabulary, problem solving, and good old wasting time. Unlike the New York Times newspaper version, where you need a subscription and a physical copy of the paper, the game will be entirely hosted on a server and will be accessible via Internet. Our product is reactive by informing the player of correct and incorrect answers. It is also shareable by allowing players to share their board with other players. Lastly, it is intuitively easy to use. The game itself it free of charge to play, but the target customer is anyone who wants to advertise. We believe that Crossing Words will be a bit hit since it is available to the masses and shareable. Te site itself is a great investment for anyone wanting to generate advertisement revenue.
 
-## User Stories [6 points ]
+## User Stories
 * As a developer I want documentation so that I can construct a properly planned project -Jin
 * As a developer I want units test so that I can do regression testing later - Jorge
 * As a developer I want easy form of communication and data sharing so I can collaborate with my team - Tony
@@ -27,7 +26,7 @@
 * As a player I want the crosswords to not be too similar to crosswords I have played before, with hints not often reused. - Steven
 * As a player I want the structure of the crossword to vary, such that the board feels different everytime I play - Steven
 
-## Requirements [6 point]
+## Requirements
 * Must accessible via web browser
 * Must Generate unique crosswords every time
 * Crosswords must follow NYT Crossword guidelines:
@@ -37,7 +36,6 @@
   * The (empty) grid must be rotationally symmetric: can be rotated 180 degrees and remain identical.
 * The probability of any pair of randomly generated crosswords sharing a clue should be less than 50%
 * The probability of any pair of randomly generated crosswords sharing similar structure (>50% match of black tiles) should be less than 10%
-* Product Backlog [5 points]
 * Set up node.js server to host the crossword puzzle
 * Draft up UI design
 * Have list of API calls
@@ -65,8 +63,7 @@
 * If the player selects new game, a new board will be generated
 * If the player selects continue, the game will load all of the previous entries
 
-## Product Backlog [5 points]
-
+## Product Backlog
 |ID| User Story | Estimate | Priority | Validation Requirement | Status |
 |---|------------|--------|----------|---------------------|--------|
 |01|As a developer I want documentation so that I can construct a properly planned project |8|HIGH|We have a Vision Statement, User Stories, Requirements, Product Backlogs, Sprint Backlogs, Burndown Chart |DONE|
@@ -90,46 +87,50 @@
 |19|As a player I want to have the crossword puzzles follow the same format as other common crosswords puzzles, such as the NYT daily crossword|7|HIGH|The crossword should follow NYT conventions, meaning no words under 3 characters, rotational symmetry, and a fully interconnected, checked board|Not Started|
 |20|As a player I want the crosswords to not be too similar to crosswords I have played before, with hints not often reused.|4|LOW|The odds of two crosswords having an identical clue should be less than 50%|Not Started|
 |21|As a player I want the structure of the crossword to vary, such that the board feels different everytime I play|6|LOW|The odds of two crosswords having more than a 50% match of black (empty) squares should be under 10%|Not Started|
-## Sprint Backlog [5 points]
+## Sprint Backlog
 * https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
 
-## Burndown Chart [2 points]
+## Burndown Chart
 * https://docs.google.com/spreadsheets/d/1O6-5PgWYNVYqPI3yn2iEwXZJWgYm1r5lbdo5Slb988c/edit#gid=0
 
-## Design Documents [3 points]
+## Design Documents
 * The website is hosted on a Raspberry Pi on Jin's Home Network. In order to gain SSH access to the server, the developer's need to send Jin a public RSA key.
 * After gaining access, developer's will be able to SSH using the command 'ssh 72.188.113.6 -l poops -p 8798'
 * The link to the site for now is: http://poopsCrossword.ml
 * The server is running the following services:
-```
-poops@raspberrypi:~/Crossing-Words $ node --version
-v10.15.1
-poops@raspberrypi:~/Crossing-Words $ npm --version
-6.4.1
-```
+    ```
+    poops@raspberrypi:~/Crossing-Words $ node --version
+    v10.15.1
+    poops@raspberrypi:~/Crossing-Words $ npm --version
+    6.4.1
+    ```
 * Mockup in the Sprint1 folder
 
-## Code [3 points]
+## Code
+* Source code is in the 'src' directory
+* https://github.com/jin0s/Crossing-Words/tree/master/Sprint%201/src
 
-## Tests [3 point]
+## Tests
+* Test code is in the 'test' directory
+* https://github.com/jin0s/Crossing-Words/tree/master/Sprint%201/test
 * To run pytest: Navigate the the Sprint 1 Folder and enter:
-```
-jin@XPS15z:~/Documents/Crossing-Words$ cd Sprint\ 1/
-jin@XPS15z:~/Documents/Crossing-Words/Sprint 1$ python3 -m pytest -v
-============================= test session starts ==============================
-platform linux -- Python 3.6.7, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/bin/python3
-cachedir: .pytest_cache
-rootdir: /home/jin/Documents/Crossing-Words/Sprint 1, inifile:
-plugins: pylama-7.4.3
-collected 3 items                                                              
+    ```
+    jin@XPS15z:~/Documents/Crossing-Words$ cd Sprint\ 1/
+    jin@XPS15z:~/Documents/Crossing-Words/Sprint 1$ python3 -m pytest -v
+    ============================= test session starts ==============================
+    platform linux -- Python 3.6.7, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/bin/python3
+    cachedir: .pytest_cache
+    rootdir: /home/jin/Documents/Crossing-Words/Sprint 1, inifile:
+    plugins: pylama-7.4.3
+    collected 3 items                                                              
 
-test/test_crossword.py::test_init_Clue PASSED                            [ 33%]
-test/test_mathlib.py::test_calc_total PASSED                             [ 66%]
-test/test_mathlib.py::test_calc_multiply PASSED                          [100%]
+    test/test_crossword.py::test_init_Clue PASSED                            [ 33%]
+    test/test_mathlib.py::test_calc_total PASSED                             [ 66%]
+    test/test_mathlib.py::test_calc_multiply PASSED                          [100%]
 
-=========================== 3 passed in 0.13 seconds ===========================                     
-```
+    =========================== 3 passed in 0.13 seconds ===========================                     
+    ```
 
-## Demonstration [10 point]
+## Demonstration
 
 This is a link to our Youtube video showing our server up and running our code: https://www.youtube.com/watch?v=nxk0t8i9fRQ
