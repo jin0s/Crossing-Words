@@ -3,9 +3,10 @@ from src import trie
 import pandas as pd
 
 class CrosswordGenerator:
-
-    def __init__(self, sz, clue_filename_, generate_filepath_):
-        self.size = sz
+    global MAX_CROSSWORD_SIZE
+    MAX_CROSSWORD_SIZE = 15
+    def __init__(self, clue_filename_, generate_filepath_):
+        self.size = MAX_CROSSWORD_SIZE
         self.clue_filename = clue_filename_
         self.generate_filepath = generate_filepath_
         self.clue_repo = None
