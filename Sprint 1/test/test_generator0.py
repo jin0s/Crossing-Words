@@ -6,7 +6,7 @@ cword = crossword.Crossword(1);
 
 
 def test_generate_structure():
-    gen.generate.structure()
+    gen.generate_structure()
 
 
 def test_generate_clue_set():
