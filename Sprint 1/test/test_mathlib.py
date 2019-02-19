@@ -1,3 +1,9 @@
+'''
+Simple testing file to check pytest functionality. Using kind of like a calibration
+to make sure pytest is working on multiple operating systems
+'''
+
+
 from src import mathlib
 
 
