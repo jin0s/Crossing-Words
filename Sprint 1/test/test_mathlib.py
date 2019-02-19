@@ -1,4 +1,4 @@
-import mathlib
+from src import mathlib
 
 
 def test_calc_total():
