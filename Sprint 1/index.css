@@ -1,4 +1,5 @@
-.Title {
-  color: blue;
-  font-family: Sans-Serif;
+.writeableBlock
+{
+  width: 26px;
+  height: 26px;
 }
