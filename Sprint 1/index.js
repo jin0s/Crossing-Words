@@ -9,8 +9,8 @@ var tempJSONString = '{ "direction":"Down", "number":22, "x":3, "y":9, "answer":
 function drawCrossword()
 {
   var html = '';
-  //This will be used to number each input from 1...255
-  var inputNumber = 1;
+  //This will be used to number each input from 0...254
+  var inputNumber = 0;
     //Loop through the amnount of amount of rows
     for (var x = 0; x < amountOfRowsInGrid; x++)
     {
@@ -34,7 +34,7 @@ function drawCrossword()
 function turnXAndYToInputId(x,y)
 {
   //Have a variable to hold the id that is going to be associated with this place
-  var id = 1;
+  var id = 0;
   //For every row that means that we must count each cell in that row
   for(i = 0; i < x; i++)
   {
