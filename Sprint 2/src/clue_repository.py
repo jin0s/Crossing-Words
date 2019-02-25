@@ -59,10 +59,17 @@ class ClueRepository:
         self.clue_dataframe = None
         self.unique_answers = None
         self.answer_trie = None
-        
+        self.loaded = False
+    
+    def is_loaded(self):
+        return self.loaded
+    
     def load(self):
+        if self.loaded:
+            return
         self.load_clues()
         self.generate_trie()
+        self.loaded = True
     
     def load_clues(self):
         self.clue_dataframe = pd.read_csv(self.clue_filepath)
@@ -89,8 +96,9 @@ class ClueRepository:
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.len() > 0]
     
     def generate_trie(self):
-        self.answer_trie = trie.Trie(self.max_answer_size)
+        self.answer_trie = Trie(self.max_answer_size)
         self.answer_trie.insert_words(self.unique_answers)
     
     def __contains__(self, prefix):
         return self.answer_trie.find_prefix(prefix)
+    
