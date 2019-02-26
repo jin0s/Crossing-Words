@@ -94,6 +94,11 @@ class ClueRepository:
         
         # remove all empty clues
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.len() > 0]
+        
+        #remove all cross-referential clues
+        self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.contains("across") == False]
+        self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.contains("down") == False]
+
     
     def generate_trie(self):
         self.answer_trie = Trie(self.max_answer_size)
@@ -101,4 +106,3 @@ class ClueRepository:
     
     def __contains__(self, prefix):
         return self.answer_trie.find_prefix(prefix)
-    
