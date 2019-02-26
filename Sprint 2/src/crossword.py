@@ -83,7 +83,7 @@ class Answer:
         
         self.length = length
         
-        self.cells = [None] * length
+        self.cells = [None for i in range(0, length)]
     
     """
     Function to add cells to the object
@@ -103,7 +103,7 @@ class Answer:
         assert(index >= 0)
         
         #cells are modifiable and therefore should not be replaced
-        assert(cells[index] is None)
+        assert(self.cells[index] is None)
         
         self.cells[index] = cell
     
@@ -123,25 +123,72 @@ class Answer:
         for cell in self.cells:
             answer += '-' if cell is None else cell.letter
         return answer
+    
 #====================================================================================
 
 class Board:
+    global MAX_ANSWERS
+    MAX_ANSWERS = 80
     
     def __init__(self, sz):
         self.size = sz
         self.start_board = np.zeros((sz,sz))
+        self.down_board = np.zeros((sz,sz))
+        self.across_board = np.zeros((sz,sz))
+        self.across_length = np.zeros(MAX_ANSWERS+1)
+        self.down_length = np.zeros(MAX_ANSWERS+1)
+    
+    def set_empty_square(self, x, y):
+        self.start_board[x][y] = -1
     
     def set_starting_square(self, x, y, number, direction, length):
         assert(self.start_board[x][y] == 0 or self.start_board[x][y] == number)
         self.start_board[x][y] = number
         
+        #The answer cannot be interrupted by empty tiles
+        if direction == Dir.DOWN:
+            down_length[number] = length
+            for nx in range(x, x+length):
+                down_board[nx][y] = number
+                assert(self.start_board[nx][y] != -1)
+        else:
+            across_length[number] = length
+            for nx in range(y, y+length):
+                across_board[x][ny] = number
+                assert(self.start_board[x][ny] != -1)
+        
         #The end of an answer must always be an empty square
         nx = x + (0 if direction == Dir.ACROSS else length)
         ny = y + (0 if direction == Dir.DOWN else length)
-        self.set_empty_square(x, y)
+        self.set_empty_square(nx, ny)
         
-    def set_empty_square(self, x, y):
-        self.start_board[x][y] = -1
+"""    
+    def generate_cell_metadata(self):
+        metadata = []
+        for x in range(0, self.size):
+            for y in range(0, self.size):
+                #Ignore cells that are empty
+                if start_board[x][y] != -1:
+                    metadata.append((x,y,down_board[x][y], across_board[x][y]))
+        return metadata
+    
+    def generate_answer_metadata():
+        metadata = []
+        for x in range(0, self.size):
+            for y in range(0, self.size):
+                #Ignore cells that aren't the start of a word
+                if start_board[x][y] > 0:
+     
+                    #Append the down word data if it exists
+                    if down_length[start_board[x][y]] > 0:
+                        metadata.append((start_board[x][y], x,y, Dir.DOWN, down_length[start_board[x][y]]))
+                    
+                    #Append the across word data if it exists
+                    if across_length[start_board[x][y]] > 0:
+                        metadata.append((start_board[x][y], x,y, Dir.DOWN, down_length[start_board[x][y]]))
+        return metadata
+"""
+
     
 #====================================================================================    
     
