@@ -63,7 +63,10 @@ class Cell:
     """
     def get_answers(self):
         return (self.across_answer.get_answer(), self.down_answer.get_answer())
-
+    
+    def __str__(self):
+        return self.letter
+    
 #====================================================================================
 """
 Class to store various metadata about each answer, such as its start position,
@@ -124,71 +127,125 @@ class Answer:
             answer += '-' if cell is None else cell.letter
         return answer
     
+    def __str__(self):
+        return self.get_answer()
+    
 #====================================================================================
 
 class Board:
     global MAX_ANSWERS
-    MAX_ANSWERS = 80
+    MAX_ANSWERS = 120
     
     def __init__(self, sz):
         self.size = sz
-        self.start_board = np.zeros((sz,sz))
-        self.down_board = np.zeros((sz,sz))
-        self.across_board = np.zeros((sz,sz))
-        self.across_length = np.zeros(MAX_ANSWERS+1)
-        self.down_length = np.zeros(MAX_ANSWERS+1)
+        self.start_board = np.zeros((sz,sz), dtype=np.int32)
+        self.down_board = np.zeros((sz,sz), dtype=np.int32)
+        self.across_board = np.zeros((sz,sz), dtype=np.int32)
+        self.across_length = np.zeros(MAX_ANSWERS+1, dtype=np.int32)
+        self.down_length = np.zeros(MAX_ANSWERS+1, dtype=np.int32)
     
+    """
+    Function to set a square as a black tile on the board
+    """
     def set_empty_square(self, x, y):
+        assert(self.start_board[x][y] == 0 or self.start_board[x][y] == -1)
         self.start_board[x][y] = -1
     
+    """
+    Function to set a square as the start of either a down or 
+    an across answer. 
+    """
     def set_starting_square(self, x, y, number, direction, length):
         assert(self.start_board[x][y] == 0 or self.start_board[x][y] == number)
         self.start_board[x][y] = number
         
         #The answer cannot be interrupted by empty tiles
         if direction == Dir.DOWN:
-            down_length[number] = length
+            self.down_length[number] = length
             for nx in range(x, x+length):
-                down_board[nx][y] = number
+                self.down_board[nx][y] = number
                 assert(self.start_board[nx][y] != -1)
         else:
-            across_length[number] = length
-            for nx in range(y, y+length):
-                across_board[x][ny] = number
+            self.across_length[number] = length
+            for ny in range(y, y+length):
+                self.across_board[x][ny] = number
                 assert(self.start_board[x][ny] != -1)
         
-        #The end of an answer must always be an empty square
+        #The end of an answer must always be an empty square or the end of the board
         nx = x + (0 if direction == Dir.ACROSS else length)
         ny = y + (0 if direction == Dir.DOWN else length)
-        self.set_empty_square(nx, ny)
-        
-"""    
-    def generate_cell_metadata(self):
-        metadata = []
-        for x in range(0, self.size):
-            for y in range(0, self.size):
-                #Ignore cells that are empty
-                if start_board[x][y] != -1:
-                    metadata.append((x,y,down_board[x][y], across_board[x][y]))
-        return metadata
+        if nx < self.size and ny < self.size:
+            self.set_empty_square(nx, ny)
+        print(self.start_board)
     
-    def generate_answer_metadata():
-        metadata = []
+    """
+    Function that returns the cell and answer set for a crossword
+    with complete structure
+    
+    Crossword must be checked and valid
+    """
+    def generate_cells_and_answers(self):
+        #initialize everything to None
+        down_answers, across_answers = self.initialize_answers()
+        cells = self.initialize_cells(down_answers, across_answers)
+        return (cells, down_answers, across_answers)
+    
+    """
+    Function that initializes the Answer objects of the board
+    
+    Returns a tuple of the (down_answers, across_answers)
+    """
+    def initialize_answers(self):
+        down_answers = [None] * MAX_ANSWERS
+        across_answers = [None] * MAX_ANSWERS
+        
+        #intialize all answers by iterating through the startboard
         for x in range(0, self.size):
             for y in range(0, self.size):
                 #Ignore cells that aren't the start of a word
-                if start_board[x][y] > 0:
-     
-                    #Append the down word data if it exists
-                    if down_length[start_board[x][y]] > 0:
-                        metadata.append((start_board[x][y], x,y, Dir.DOWN, down_length[start_board[x][y]]))
-                    
-                    #Append the across word data if it exists
-                    if across_length[start_board[x][y]] > 0:
-                        metadata.append((start_board[x][y], x,y, Dir.DOWN, down_length[start_board[x][y]]))
-        return metadata
-"""
+                if self.start_board[x][y] == 0 or self.start_board[x][y] == -1:
+                    continue
+                
+                #aid is the answer id
+                aid = self.start_board[x][y]
 
+                #Add the down answer if it exists
+                if self.down_length[aid] > 0:
+                    down_answers[aid] = Answer(x,y,self.down_length[aid],Dir.DOWN, aid)
+
+                #Add the across answer if it exists
+                if self.across_length[aid] > 0:
+                    across_answers[aid] = Answer(x,y,self.across_length[aid], Dir.ACROSS, aid)
+
+        #end initialization
+        return (down_answers, across_answers)
+    
+    """
+    Function that initializes the Cell objects of the board
+    
+    Requires the list of down and across answers for the board
+    Returns a 2-D array of every cell in the crossword, with cells that
+    are empty represented as None
+    """
+    def initialize_cells(self, down_answers, across_answers):
+        cells = [[None]*self.size for i in range(0, self.size)]
+        
+        for x in range(0, self.size):
+            for y in range(0, self.size):
+                #Ignore cells that are empty
+                if self.start_board[x][y] == -1:
+                    continue
+                
+                #instantiate the cell with pointers to the answer it belongs to
+                across_answer = across_answers[self.across_board[x][y]]
+                down_answer = down_answers[self.down_board[x][y]]
+                cells[x][y] = Cell(x,y,across_answer, down_answer)
+                
+                #add the cell to the answers it belongs to
+                across_answer.add_cell(cells[x][y])
+                down_answer.add_cell(cells[x][y])
+
+        return cells
     
 #====================================================================================    
     
