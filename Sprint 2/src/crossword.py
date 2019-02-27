@@ -172,7 +172,6 @@ class Board:
         ny = y + (0 if direction == Dir.DOWN else length)
         if nx < self.size and ny < self.size:
             self.set_empty_square(nx, ny)
-        print(self.start_board)
     
     """
     Function that returns the cell and answer set for a crossword
@@ -242,7 +241,11 @@ class Board:
                 down_answer.add_cell(cells[x][y])
 
         return cells
-    
+    """
+    Function to print out the board
+    """
+    def __str__(self):
+        return str(self.start_board)
 #====================================================================================    
     
 class Crossword: 
