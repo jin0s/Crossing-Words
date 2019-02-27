@@ -16,7 +16,7 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 ## Design Documents
 * The website is hosted on a Raspberry Pi on Jin's Home Network. In order to gain SSH access to the server, the developer's need to send Jin a public RSA key.
 * After gaining access, developer's will be able to SSH using the command 'ssh 72.188.113.6 -l poops -p 8798'
-* The link to the site for now is: http://poopsCrossword.ml (http://72.188.113.6:8000/)
+* The link to the site for now is: http://72.188.113.6:8000/
 * The server is running the following services:
     ```
     poops@raspberrypi:~/Crossing-Words $ node --version
