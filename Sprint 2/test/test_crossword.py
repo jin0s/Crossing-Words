@@ -4,21 +4,23 @@ Simple testing file to check initialization functionality of crossword.property
 
 from src import crossword
 
-clue = crossword.Clue(4,5,6,"D",7)
-print(clue)
-
-def test_init_Clue():
-    assert clue != None
-
-# Simple check to see if the __str__ is returning properly
-def test__str__():
-    retval = str(clue)
-    assert retval == retval
-
 def test_init_Board():
-    board = crossword.Board(2)
+    board = crossword.Board(15)
     assert board != None
 
 def test_init_Crossword():
-    cword = crossword.Crossword(2)
+    board = crossword.Board(15)
+    cword = crossword.Crossword(15, board)
     assert cword != None
+
+def test_init_Answer():
+    answer = crossword.Answer(1,2,5,"Across",5)
+
+
+def test_init_Clue():
+    answer = crossword.Answer(1,2,5,"Across",5)
+    clue = crossword.Clue(answer)
+    assert clue != None
+
+def test_init_Cell():
+    cell = crossword.Cell(1, 2, "Across", "Down")
