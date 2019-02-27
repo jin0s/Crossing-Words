@@ -18,10 +18,6 @@ class Clue:
         self.answer = answer
         self.clue = ""
     
-    def __init__(self, answer, clue):
-        self.answer = answer
-        self.clue = clue
-        
     def set_clue(self, clue):
         self.clue = clue
     
