@@ -6,10 +6,9 @@ def ord_(char):
 
 class Trie:
     
-    def __init__(self, _max_depth):
-        self.max_depth = _max_depth
-        self.head = TrieNode('-', _max_depth)
-        self.depth_counter = [0]*(_max_depth+1)
+    def __init__(self, max_depth):
+        self.max_depth = max_depth
+        self.head = TrieNode('-', max_depth)
         
     def __contains__(self, word):
         if(len(word) > self.max_depth):
@@ -18,7 +17,6 @@ class Trie:
     
     def insert_word(self, word):
         assert(len(word) <= self.max_depth)
-        self.depth_counter[len(word)] += 1
         self.head.insert_word(0, word)
         
     def insert_words(self, words):
@@ -27,24 +25,37 @@ class Trie:
         
 class TrieNode:
     
-    def __init__(self, _cur_char, _max_depth):
-        self.cur_char = _cur_char
+    def __init__(self, cur_char, max_depth):
+        self.cur_char = cur_char
         self.next_char = [None]*26
-        self.max_depth = _max_depth
-        self.depth_counter = [0] *(_max_depth+1)
+        self.depth_counter = [0]*(max_depth+1)
+        self.max_depth = max_depth
+        self.word_end = False
         
     def find_prefix(self, index, word):
         if(len(word) == index):
-            return True
-        next_node = ord_(word[index])
-        if self.next_char[next_node] is None:
+            return self.word_end
+        if(self.depth_counter[len(word)] == 0):
             return False
-        return self.next_char[next_node].find_prefix(index+1, word)
+        if word[index] == '-':
+            #character is a wildcard-- there needs to be at least one character it works for
+            for node in self.next_char:
+                if node is not None:
+                    if(node.find_prefix(index+1, word)):
+                        return True
+            return False
+        else:
+            #character is not a wildcard character
+            next_node = ord_(word[index])
+            if self.next_char[next_node] is None:
+                return False
+            return self.next_char[next_node].find_prefix(index+1, word)
     
     def insert_word(self, index, word):
         if(len(word) == index):
+            self.word_end = True
             return
-        self.depth_counter[len(word)-index] += 1
+        self.depth_counter[len(word)] += 1
         next_node = ord_(word[index])
         if self.next_char[next_node] is None:
             self.next_char[next_node] = TrieNode(word[index], self.max_depth)
@@ -53,9 +64,9 @@ class TrieNode:
 
 class ClueRepository:
     
-    def __init__(self, _clue_filepath, _max_answer_size):
-        self.clue_filepath = _clue_filepath
-        self.max_answer_size = _max_answer_size
+    def __init__(self, clue_filepath, max_answer_size):
+        self.clue_filepath = clue_filepath
+        self.max_answer_size = max_answer_size
         self.clue_dataframe = None
         self.unique_answers = None
         self.answer_trie = None
