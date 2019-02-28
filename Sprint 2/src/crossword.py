@@ -77,7 +77,7 @@ class Answer:
         #the cell at (x_position, y_position) is the start of the answer
         self.x_position = x_position
         self.y_position = y_position
-        
+        self.number = number
         self.direction = direction
         
         self.length = length
@@ -120,11 +120,16 @@ class Answer:
     def get_answer(self):
         answer = ""
         for cell in self.cells:
-            answer += '-' if cell is None else cell.letter
+            answer += str(cell)
         return answer
     
     def __str__(self):
-        return self.get_answer()
+        d = "down" if self.direction == Dir.DOWN else "across"
+        n = self.number
+        x = self.x_position
+        y = self.y_position
+        a = self.get_answer()
+        return f'"d":"{d}", "n":{n}, "x":{x}, "y":{y}, "a":"{a}"'
     
 #====================================================================================
 
