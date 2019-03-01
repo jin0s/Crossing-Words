@@ -117,7 +117,13 @@ class ClueRepository:
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.contains("starred") == False]
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.contains("Starred") == False]
 
-
+    def find_frequency(self):
+        frequency = [0]*26
+        for x in range(0,26):
+            char = chr(x + ord('A'))
+            frequency[x] = np.sum([str.count(ans, char) for ans in self.unique_answers])
+        return frequency
+        
     def generate_trie(self):
         self.answer_trie = Trie(self.max_answer_size)
         self.answer_trie.insert_words(self.unique_answers)
