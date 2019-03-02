@@ -53,6 +53,30 @@ function addJSONDataToBoard()
     $('#'+cellToWriteData).attr('data-letter', JSONData.answer.charAt(i));
     cellToWriteData = cellToWriteData + incrementation;
   }
+  grayOutEmptyCells();
+}
+
+//This function will make all of the cells that dont have a word associated dark gray and untypable
+function grayOutEmptyCells()
+{
+  //Loop through each of cells
+  for(var x = 0; x < amountOfRowsInGrid; x++)
+  {
+    for(var y = 0; y < amountOfColumnsInGrid; y++)
+    {
+        var cellID = turnXAndYToInputId(x,y);
+        //If this cell does not have a character associated with interval
+        if($('#'+cellID).attr('data-letter') === undefined)
+        {
+          //Make cell untypeable
+          $('#'+cellID).prop("readonly", true);
+          //Black out the cells
+          $('#'+cellID).css("background-color", "Black");
+        }
+
+    }
+  }
+
 }
 
 
@@ -106,7 +130,7 @@ function checkBoard()
       $('#'+i).css("background-color", "green");
     }
     //If the word is incorrect we want to make it red
-    if(inputByPlayer !== correctLetter)
+    if(inputByPlayer !== correctLetter && correctLetter !== undefined)
     {
       $('#'+i).css("background-color", "red");
     }
