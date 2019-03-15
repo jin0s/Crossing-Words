@@ -1,5 +1,5 @@
 '''
-Simple testing file to check initialization functionality of crossword.property
+Simple testing file to check initialization functionality of crossword.py
 '''
 
 from src import crossword

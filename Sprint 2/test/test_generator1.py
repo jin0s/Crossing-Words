@@ -5,7 +5,7 @@ Unit test for generate function in generator.py
 from src import generator
 
 def test_generate():
-    gen = generator.CrosswordGenerator(1, "clues.csv", "./")
+    gen = generator.CrosswordGenerator("clues.csv", "./")
     gen.generate()
     try:
         ex_filename = "empty_crossword.txt"

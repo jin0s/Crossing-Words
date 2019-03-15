@@ -4,6 +4,12 @@ Initial test of generator.py to see if the Class CroswordGenerator can be initia
 
 from src import generator
 
+
+gen = generator.CrosswordGenerator("Data/clues.csv", "./")
+
+
 def test_init_CrosswordGenerator():
-    gen = generator.CrosswordGenerator(1, "crossword.txt", "./")
     assert gen != None
+
+def test_generate():
+    gen.generate()
