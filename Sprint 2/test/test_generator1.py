@@ -2,7 +2,7 @@
 Unit test for generate function in generator.py
 '''
 
-from src import generator
+from src.generator import *
 
 def test_generate():
     gen = generator.CrosswordGenerator("clues.csv", "./")

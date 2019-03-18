@@ -15,7 +15,7 @@ def test_init_Crossword():
 
 def test_init_Answer():
     answer = crossword.Answer(1,2,5,"Across",5)
-
+    assert answer != None
 
 def test_init_Clue():
     answer = crossword.Answer(1,2,5,"Across",5)
@@ -24,3 +24,4 @@ def test_init_Clue():
 
 def test_init_Cell():
     cell = crossword.Cell(1, 2, "Across", "Down")
+    assert cell != None
