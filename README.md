@@ -9,9 +9,11 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 
 ## Sprint Backlog
 * https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
+* Sprint 1 and 2 are on different tabs in the Sprint Backlog sheet
 
 ## Burndown Chart
 * https://docs.google.com/spreadsheets/d/1O6-5PgWYNVYqPI3yn2iEwXZJWgYm1r5lbdo5Slb988c/edit#gid=0
+* Sprint 1 and 2 are on different tabs in the Burndown Chart
 
 ## Design Documents
 * The website is hosted on a Raspberry Pi on Jin's Home Network. In order to gain SSH access to the server, the developer's need to send Jin a public RSA key.
@@ -33,8 +35,9 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 * Python Crossword Generator UML Diagram: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
 
 ## Code
-* Source code is in the 'src' directory
-* https://github.com/jin0s/Crossing-Words/tree/master/Sprint%201/src
+* Crossword generator source code is in 'src' and Webpages files are in the folder 'Sprint 2'
+* Python Crossword Generator: https://github.com/jin0s/Crossing-Words/tree/master/Sprint%202/src
+* Webpage Files: https://github.com/jin0s/Crossing-Words/tree/master/Sprint%202/
 
 ## Tests
 * Test code is in the 'test' directory
