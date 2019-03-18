@@ -4,36 +4,36 @@ var amountOfRowsInGrid = 15;
 
 //THIS IS TEMP JUST FOR TESTING REASONS
 var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
-                        '{ "direction":"Across", "n":6, "x":1, "y":1, "answer":"REPEATS", "hint":"Shows youve seen" }',
-                        '{ "direction":"Across", "n":7, "x":9, "y":1, "answer":"NINES", "hint":"Eights arent enough" }',
-                        '{ "direction":"Across", "n":9, "x":0, "y":3, "answer":"DIAL", "hint":"Dont touch that __" }',
-                        '{ "direction":"Across", "n":10, "x":5, "y":3, "answer":"ASTRONOMER", "hint":"Starstruck scientist" }',
-                        '{ "direction":"Across", "n":11, "x":0, "y":5, "answer":"WEIGHING", "hint":"Measuring heaviness" }',
-                        '{ "direction":"Across", "n":13, "x":9, "y":5, "answer":"COUSIN", "hint":"Maybe you can marry" }',
-                        '{ "direction":"Across", "n":15, "x":0, "y":7, "answer":"JAZZ", "hint":"American music" }',
-                        '{ "direction":"Across", "n":17, "x":5, "y":7, "answer":"BOATS", "hint":"Marina sights" }',
-                        '{ "direction":"Across", "n":18, "x":11, "y":7, "answer":"EASE", "hint":"Let out" }',
-                        '{ "direction":"Across", "n":19, "x":0, "y":9, "answer":"PURSES", "hint":"Sums of money" }',
-                        '{ "direction":"Across", "n":20, "x":7, "y":9, "answer":"POSTPONE", "hint":"Give a rain check" }',
-                        '{ "direction":"Across", "n":23, "x":0, "y":11, "answer":"RIDICULOUS", "hint":"Cockamamy" }',
-                        '{ "direction":"Across", "n":26, "x":11, "y":11, "answer":"CAGE", "hint":"Hamsters home" }',
-                        '{ "direction":"Across", "n":27, "x":1, "y":13, "answer":"GHOST", "hint":"Father & son, theres a crowd" }',
-                        '{ "direction":"Across", "n":28, "x":7, "y":13, "answer":"ELEMENT", "hint":"Substance like no other" }',
-                        '{ "direction":"Down", "n":1, "x":3, "y":0, "answer":"APOLOGIZES", "hint":"Makes amends" }',
-                        '{ "direction":"Down", "n":2, "x":5, "y":0, "answer":"HAWAII", "hint":"Baracks home " }',
-                        '{ "direction":"Down", "n":3, "x":7, "y":0, "answer":"ISNT", "hint":"__ it romantic?" }',
-                        '{ "direction":"Down", "n":4, "x":9, "y":0, "answer":"ENFORCES", "hint":"Keeps lawfull" }',
-                        '{ "direction":"Down", "n":5, "x":11, "y":0, "answer":"ONTO", "hint":"Im __ you!" }',
-                        '{ "direction":"Down", "n":6, "x":1, "y":1, "answer":"RAISE", "hint":"Bring up" }',
-                        '{ "direction":"Down", "n":8, "x":13, "y":1, "answer":"SPECIES", "hint":"Variety" }',
-                        '{ "direction":"Down", "n":12, "x":7, "y":5, "answer":"GRASP", "hint":"Hold" }',
-                        '{ "direction":"Down", "n":14, "x":11, "y":5, "answer":"UNEXPECTED", "hint":"Abrupt" }',
-                        '{ "direction":"Down", "n":16, "x":1, "y":7, "answer":"AMUSING", "hint":"Gladdening" }',
-                        '{ "direction":"Down", "n":17, "x":5, "y":7, "answer":"BISCUITS", "hint":"Go with gravy" }',
-                        '{ "direction":"Down", "n":21, "x":9, "y":9, "answer":"SISTER", "hint":"Nun" }',
-                        '{ "direction":"Down", "n":22, "x":13, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
-                        '{ "direction":"Down", "n":24, "x":3, "y":11, "answer":"IRON", "hint":"Pumping __" }',
-                        '{ "direction":"Down", "n":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
+                        '{ "direction":"Across", "number":6, "x":1, "y":1, "answer":"REPEATS", "hint":"Shows youve seen" }',
+                        '{ "direction":"Across", "number":7, "x":9, "y":1, "answer":"NINES", "hint":"Eights arent enough" }',
+                        '{ "direction":"Across", "number":9, "x":0, "y":3, "answer":"DIAL", "hint":"Dont touch that __" }',
+                        '{ "direction":"Across", "number":10, "x":5, "y":3, "answer":"ASTRONOMER", "hint":"Starstruck scientist" }',
+                        '{ "direction":"Across", "number":11, "x":0, "y":5, "answer":"WEIGHING", "hint":"Measuring heaviness" }',
+                        '{ "direction":"Across", "number":13, "x":9, "y":5, "answer":"COUSIN", "hint":"Maybe you can marry" }',
+                        '{ "direction":"Across", "number":15, "x":0, "y":7, "answer":"JAZZ", "hint":"American music" }',
+                        '{ "direction":"Across", "number":17, "x":5, "y":7, "answer":"BOATS", "hint":"Marina sights" }',
+                        '{ "direction":"Across", "number":18, "x":11, "y":7, "answer":"EASE", "hint":"Let out" }',
+                        '{ "direction":"Across", "number":19, "x":0, "y":9, "answer":"PURSES", "hint":"Sums of money" }',
+                        '{ "direction":"Across", "number":20, "x":7, "y":9, "answer":"POSTPONE", "hint":"Give a rain check" }',
+                        '{ "direction":"Across", "number":23, "x":0, "y":11, "answer":"RIDICULOUS", "hint":"Cockamamy" }',
+                        '{ "direction":"Across", "number":26, "x":11, "y":11, "answer":"CAGE", "hint":"Hamsters home" }',
+                        '{ "direction":"Across", "number":27, "x":1, "y":13, "answer":"GHOST", "hint":"Father & son, theres a crowd" }',
+                        '{ "direction":"Across", "number":28, "x":7, "y":13, "answer":"ELEMENT", "hint":"Substance like no other" }',
+                        '{ "direction":"Down", "number":1, "x":3, "y":0, "answer":"APOLOGIZES", "hint":"Makes amends" }',
+                        '{ "direction":"Down", "number":2, "x":5, "y":0, "answer":"HAWAII", "hint":"Baracks home " }',
+                        '{ "direction":"Down", "number":3, "x":7, "y":0, "answer":"ISNT", "hint":"__ it romantic?" }',
+                        '{ "direction":"Down", "number":4, "x":9, "y":0, "answer":"ENFORCES", "hint":"Keeps lawfull" }',
+                        '{ "direction":"Down", "number":5, "x":11, "y":0, "answer":"ONTO", "hint":"Im __ you!" }',
+                        '{ "direction":"Down", "number":6, "x":1, "y":1, "answer":"RAISE", "hint":"Bring up" }',
+                        '{ "direction":"Down", "number":8, "x":13, "y":1, "answer":"SPECIES", "hint":"Variety" }',
+                        '{ "direction":"Down", "number":12, "x":7, "y":5, "answer":"GRASP", "hint":"Hold" }',
+                        '{ "direction":"Down", "number":14, "x":11, "y":5, "answer":"UNEXPECTED", "hint":"Abrupt" }',
+                        '{ "direction":"Down", "number":16, "x":1, "y":7, "answer":"AMUSING", "hint":"Gladdening" }',
+                        '{ "direction":"Down", "number":17, "x":5, "y":7, "answer":"BISCUITS", "hint":"Go with gravy" }',
+                        '{ "direction":"Down", "number":21, "x":9, "y":9, "answer":"SISTER", "hint":"Nun" }',
+                        '{ "direction":"Down", "number":22, "x":13, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
+                        '{ "direction":"Down", "number":24, "x":3, "y":11, "answer":"IRON", "hint":"Pumping __" }',
+                        '{ "direction":"Down", "number":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
 
 var numberOfBoards = tempJSONStrings.length - 1;
 
@@ -58,6 +58,7 @@ function drawCrossword(boardNumber = 5)
     }
     $('#CrosswordPuzzle').html(html);
     addJSONDataToBoard(boardNumber);
+    addCluesToBoard(boardNumber);
 }
 
 //This function will take the JSON String and add the data to the field
@@ -188,4 +189,30 @@ function newBoard()
 {
     var randomBoardID = getRandomInt(0, numberOfBoards);
     drawCrossword(randomBoardID);
+}
+
+function addCluesToBoard(boardNumber)
+{
+    var JSONData = JSON.parse(tempJSONStrings[boardNumber]);
+    var direction = JSONData.direction;
+    var html = '';
+    $('#acrossClues').html(html);
+    $('#downClues').html(html);
+
+    if(direction === "Across")
+    {
+        html = '<p class="A' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+        $('#acrossClues').html(html);
+    }
+
+    else if(direction === "Down")
+    {
+        html = '<p class="D' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+        $('#downClues').html(html);
+    }
+
+    else
+    {
+       console.log("Error adding the clue for" + JSONData.answer);
+    }
 }
