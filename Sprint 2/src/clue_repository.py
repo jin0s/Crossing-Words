@@ -71,6 +71,7 @@ class ClueRepository:
         self.unique_answers = None
         self.answer_trie = None
         self.loaded = False
+        self.frequency = [[0]*26 for i in range(0, max_answer_size)]
     
     def is_loaded(self):
         return self.loaded
@@ -86,6 +87,7 @@ class ClueRepository:
         self.clue_dataframe = pd.read_csv(self.clue_filepath)
         self.clean_clues()
         self.unique_answers = self.clue_dataframe.drop_duplicates('answer')['answer'].values
+        self.find_frequency()
 
     def clean_clues(self):
         # ignore all na values
@@ -118,11 +120,12 @@ class ClueRepository:
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.clue.str.contains("Starred") == False]
 
     def find_frequency(self):
-        frequency = [0]*26
-        for x in range(0,26):
-            char = chr(x + ord('A'))
-            frequency[x] = np.sum([str.count(ans, char) for ans in self.unique_answers])
-        return frequency
+        for word in self.unique_answers:
+            for char, index in zip(word, range(len(word))):
+                self.frequency[index][ord(char)-ord('A')] += 1
+    
+    def get_frequency(self, size):
+        return self.frequency[size]
         
     def generate_trie(self):
         self.answer_trie = Trie(self.max_answer_size)
