@@ -129,6 +129,26 @@ function turnXAndYToInputId(x,y)
   return id;
 }
 
+//This function will test the turn x and y into a single number
+function testTurnXandYToInputId()
+{
+   var correctID = 0;
+   var functionWorks = true;
+   for(var y = 0; y < amountOfRowsInGrid; y++)
+   {
+     for(var x = 0; x < amountOfColumnsInGrid; x++)
+     {
+       var answer = turnXAndYToInputId(x,y);
+       if(correctID !== answer)
+       {
+         functionWorks = false;
+       }
+       correctID++;
+     }
+   }
+   console.log(functionWorks);
+}
+
 //This function makes sure that each block only has letter
 function makeEachCellOneCharacter(cellID)
 {
