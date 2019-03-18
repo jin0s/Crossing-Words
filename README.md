@@ -59,6 +59,7 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 
     =========================== 3 passed in 0.13 seconds ===========================                     
     ```
+* Validation Tests for UI: https://docs.google.com/document/d/1L3gZZaVUrWObaSc9bOd9gkVLOY24MreumPI_OTGZgFM/edit?usp=sharing
 
 ## Demonstration
 
