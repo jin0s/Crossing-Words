@@ -14,9 +14,9 @@ Allows for setting of clues after initialization
 """
 class Clue:
     
-    def __init__(self, answer):
+    def __init__(self, answer, clue):
         self.answer = answer
-        self.clue = ""
+        self.clue = clue
     
     def set_clue(self, clue):
         self.clue = clue
@@ -27,13 +27,13 @@ class Clue:
     length is implicit and therefore unincluded
     """
     def __str__(self):
-        d = "down" if self.answer.direction == Dir.DOWN else "across"
+        d = "Down" if self.answer.direction == Dir.DOWN else "Across"
         n = self.answer.number
         x = self.answer.x_position
         y = self.answer.y_position
         a = self.answer.get_answer()
         c = self.clue
-        return f'{{"d":"{d}", "n":{n}, "x":{x}, "y":{y}, "a":"{a}", "c":"{c} }}"'
+        return f'{{"direction":"{d}", "number":{n}, "x":{x}, "y":{y}, "answer":"{a}", "hint":"{c} }}"'
     
 #====================================================================================
 
@@ -62,6 +62,11 @@ class Cell:
     
     def __str__(self):
         return self.letter
+    
+    def __eq__(self, other):
+        if other == None:
+            return False
+        return self.x_position == other.x_position and self.y_position == other.y_position
     
 #====================================================================================
 """
@@ -130,6 +135,12 @@ class Answer:
         y = self.y_position
         a = self.get_answer()
         return f'"d":"{d}", "n":{n}, "x":{x}, "y":{y}, "a":"{a}"'
+    
+    def __eq__(self, other):
+        if other == None:
+            return False
+        return self.x_position == other.x_position and self.y_position == other.y_position
+    
     
 #====================================================================================
 
@@ -255,11 +266,17 @@ class Board:
     
 class Crossword: 
     
-    def __init__(self, size, board):
+    def __init__(self, size):
         self.size = size
-        self.board = board
         self.clues = []
     
+    def add_clue(self, answer, clue):
+        self.clues.append(Clue(answer, clue))
+        
     def __str__(self):
-        return  f'{{\n"title": "Randomly Generated Crossword",\n"by": "#1 POOSD Group",\n"clues":{self.clues}\n}}'
+        clue_str = "["
+        for clue in self.clues:
+            clue_str += str(clue) + ","
+        clue_str = clue_str[:-1] +"]"
+        return  f'{{\n"title": "Randomly Generated Crossword",\n"by": "#1 POOSD Group",\n"clues":{clue_str}\n}}'
     
