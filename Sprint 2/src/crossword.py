@@ -33,7 +33,7 @@ class Clue:
         y = self.answer.y_position
         a = self.answer.get_answer()
         c = self.clue
-        return f'{{"direction":"{d}", "number":{n}, "x":{x}, "y":{y}, "answer":"{a}", "hint":"{c} }}"'
+        return f'{{"direction":"{d}", "number":{n}, "x":{x}, "y":{y}, "answer":"{a}", "hint":"{c}"}}'
     
 #====================================================================================
 
