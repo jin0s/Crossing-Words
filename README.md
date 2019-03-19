@@ -32,10 +32,10 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
     6.4.1
     ```
 * System Design: https://drive.google.com/file/d/1jLuTz9hMdekggEr7gyuucSSUol9e0XDF/view?usp=sharing
-![System Design](/Design\ Documents/SystemDiagram.png)
+![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%202/Design%20Documents/SystemDiagram.PNG)
 * Python Crossword Generator UML Diagram: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
 * User Interface Draft
-![UI Design](/Design\ Documents/UI_Diagram.jpg)
+![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%202/Design%20Documents/UI_Diagram.jpg)
 
 ## Code
 * Crossword generator source code is in 'src' and Webpages files are in the folder 'Sprint 2'
