@@ -33,9 +33,16 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
     ```
 * System Design: https://drive.google.com/file/d/1jLuTz9hMdekggEr7gyuucSSUol9e0XDF/view?usp=sharing
 ![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%202/Design%20Documents/SystemDiagram.PNG)
-* Python Crossword Generator UML Diagram: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
 * User Interface Draft
 ![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%202/Design%20Documents/UI_Diagram.jpg)
+### UML
+* Python Crossword Generator UML Diagram: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
+The center of the algorithmic object-based backend for this project is the CrosswordGenerator class. The Class is very large, as the algorithmic core of the project is a large backtracking function that attempts to fill in crossword step-by-step, with each cell of the crossword being assigned a random letter. The remainder of the classes largely exist to aid in the compartmentality and readability of the code within the CrosswordGenerator class. 
+On the data side, the ClueRepository class contains the tools for quickly searching for clues and checking to see if answers are valid. Since clues are impossible to randomly generate, we use a large bank of clues from old crosswords. Answers therefore must exist within this bank. The ClueRepository class handles the cleanup of this crossword bank, and implements a Trie via the Trie and TrieNode classes in order to speedup validation queries. 
+The generation algorithm implemented in CrosswordGenerator can be broken down into two large parts: one for generating the structure of the crossword, and the other for populating that structure with answers. The Board class seeks to aid in the implementation of the structure generation, while the Cell and Answer classes seek to aid with the implementation of the answer generation. The Cell and Answer classes are heavily intertwined; this must be the case so that when the backtracking changes any Cell object, the respective Answer objects are updated as well. 
+The remaining classes are for the most part trivial, the Clue and Crossword class exist only to package data in order to keep printing processes out of the main CrosswordGenerator class.
+
+The User stories 15 and 18 are both handled within the ClueRepository class, as that class does the cleanup of the data to ensure that the clues are valid (15), as well as the random selection of the clues to ensure that the clues vary significantly from puzzle to puzzle(18). The remainder of the backend user stories (16,17,19-24) are all handled by the CrosswordGenerator class itself, with the generate_structure() function satisfying 17 and 19-24, and the generate_answers() function satisfying 16.
 
 ## Code
 * Crossword generator source code is in 'src' and Webpages files are in the folder 'Sprint 2'
