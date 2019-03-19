@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import random
 
 def ord_(char):
     return ord(char) - ord('A')
@@ -76,6 +77,11 @@ class ClueRepository:
     def is_loaded(self):
         return self.loaded
     
+    def select_clue(self, answer):
+        possible_clues = self.clue_dataframe[self.clue_dataframe.answer == answer]['clue'].values
+        c_ind = random.randint(0, len(possible_clues)-1)
+        return possible_clues[c_ind]
+    
     def load(self):
         if self.loaded:
             return
@@ -98,6 +104,7 @@ class ClueRepository:
 
         # remove all non-alphabetic answers
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.answer.str.isalpha()]
+        self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.answer.str.isupper()]
 
         # remove all answers greater than the max answer size
         self.clue_dataframe = self.clue_dataframe[self.clue_dataframe.answer.str.len() <= self.max_answer_size]
