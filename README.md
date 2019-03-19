@@ -8,11 +8,11 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 * Requirements is a different tab in the Product Backlog sheet.
 
 ## Sprint Backlog
-* https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=0
+* https://docs.google.com/spreadsheets/d/1ho4MHLfHYYG90qOGLvA9yksRg7iM44FcjVvcUUN4qdw/edit#gid=2077176750
 * Sprint 1 and 2 are on different tabs in the Sprint Backlog sheet
 
 ## Burndown Chart
-* https://docs.google.com/spreadsheets/d/1O6-5PgWYNVYqPI3yn2iEwXZJWgYm1r5lbdo5Slb988c/edit#gid=0
+* https://docs.google.com/spreadsheets/d/1O6-5PgWYNVYqPI3yn2iEwXZJWgYm1r5lbdo5Slb988c/edit#gid=1848859173
 * Sprint 1 and 2 are on different tabs in the Burndown Chart
 
 ## Design Documents
