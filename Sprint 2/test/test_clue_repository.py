@@ -1,7 +1,9 @@
 """
 Unit tests for Trie, TrieNode, and ClueRepository
 """
-
+from src.crossword import *
+from src.clue_repository import *
+from src.generator import *
 #TRIE UNIT TESTs
 def test_init_trie():
     md = 5
