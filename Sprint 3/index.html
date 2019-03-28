@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<div class="center">
+<body onload="drawCrossword()">
+  <div id = "CrosswordPuzzle">
+      <!-- Data will be added here from index.js -->
+  </div>
+  <div class = "Clues">
+      <div class="across-clue-column">
+          <h4 class="clue-lable">Across</h4>
+          <div id = "acrossClues">
+                <!-- Data will be added here from index.js -->
+          </div>
+      </div>
+      <div class="down-clue-column">
+          <h4 class="clue-lable">Down</h4>
+          <div  id ="downClues">
+                <!-- Data will be added here from index.js -->
+          </div>
+      </div>
+  </div>
+  <button onclick="checkBoard();">Submit</button>
+  <button onclick="newBoard();">New</button>
+</body>
+<link rel="stylesheet" href="index.css" type="text/css">
+<script src="index.js"></script>
+</div>
+</html>

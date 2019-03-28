@@ -2,6 +2,7 @@
  "title": "Sample Puzzle",
  "by": "By Line",
  "clues": [
+
 	{"direction":"Across", "number":1, "x":1, "y":1, "answer":"ELBE", "hint":"River that formed part of the border between East and West Germany"},
 	{"direction":"Across", "number":5, "x":1, "y":6, "answer":"DANK", "hint":"Cold and moist, as a cellar"},
 	{"direction":"Across", "number":9, "x":1, "y":11, "answer":"ASAHI", "hint":"Brewery in the Nikkei 225"},

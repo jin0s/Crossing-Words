@@ -1,0 +1,28 @@
+.center{
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.writeableBlock
+{
+  width: 26px;
+  height: 26px;
+}
+
+.across-clue-column {
+  float: Left;
+  width: 300px;
+}
+
+.down-clue-column {
+  float: Left;
+  width: 300px;
+}
+
+/* Clear floats after the columns */
+.Clues:after {
+  content: "";
+  display: table;
+  clear: both;
+}
