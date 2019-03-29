@@ -2,6 +2,8 @@
 var amountOfColumnsInGrid = 15;
 var amountOfRowsInGrid = 15;
 
+
+
 //THIS IS TEMP JUST FOR TESTING REASONS
 var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
                         '{ "direction":"Across", "number":6, "x":1, "y":1, "answer":"REPEATS", "hint":"Shows youve seen" }',
@@ -36,6 +38,12 @@ var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer
                         '{ "direction":"Down", "number":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
 
 var numberOfBoards = tempJSONStrings.length - 1;
+/* 
+Taking in Json Files to be read locally
+var ReadInJson = require('.data.Json');
+
+*/
+
 
 //This function will draw the crossword
 function drawCrossword(boardNumber = 5)
