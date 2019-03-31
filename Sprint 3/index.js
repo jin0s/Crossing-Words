@@ -39,7 +39,7 @@ var amountOfRowsInGrid = 15;
 
 //Taking in Json Files to be read locally
 	//let tempJSONStrings = require('data.json');
-	
+
 	var numberOfBoards = tempJSONStrings.length - 1;
 
 
@@ -74,27 +74,30 @@ function drawCrossword(boardNumber = 5)
 //This function will take the JSON String and add the data to the field
 function addJSONDataToBoard(boardNumber)
 {
-  //Parse the JSON Data with all of the data of this word
-  var JSONData = JSON.parse(tempJSONStrings[boardNumber]);
-  //Get the cell that this word starts on based on the x and y it starts of
-  var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
-  var placementOfWord = JSONData.direction;
-  var incrementation = 0;
-  //If the word is across we will add data increasing by columns
-  if(placementOfWord === "Across")
+  for(var i = 0; i < tempJSONStrings.length; i++)
   {
-    incrementation = 1;
-  }
-  //If the word is down we will add data increasing by rows
-  if(placementOfWord === "Down")
-  {
-    incrementation = amountOfColumnsInGrid;
-  }
-  //For every letter in the word we add a data type with the letter that is supposed to be there
-  for(var i = 0; i < JSONData.answer.length; i++)
-  {
-    $('#'+cellToWriteData).attr('data-letter', JSONData.answer.charAt(i));
-    cellToWriteData = cellToWriteData + incrementation;
+    //Parse the JSON Data with all of the data of this word
+    var JSONData = JSON.parse(tempJSONStrings[i]);
+    //Get the cell that this word starts on based on the x and y it starts of
+    var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
+    var placementOfWord = JSONData.direction;
+    var incrementation = 0;
+    //If the word is across we will add data increasing by columns
+    if(placementOfWord === "Across")
+    {
+      incrementation = 1;
+    }
+    //If the word is down we will add data increasing by rows
+    if(placementOfWord === "Down")
+    {
+      incrementation = amountOfColumnsInGrid;
+    }
+    //For every letter in the word we add a data type with the letter that is supposed to be there
+    for(var i = 0; i < JSONData.answer.length; i++)
+    {
+      $('#'+cellToWriteData).attr('data-letter', JSONData.answer.charAt(i));
+      cellToWriteData = cellToWriteData + incrementation;
+    }
   }
   grayOutEmptyCells();
 }
