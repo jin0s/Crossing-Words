@@ -74,10 +74,11 @@ function drawCrossword(boardNumber = 5)
 //This function will take the JSON String and add the data to the field
 function addJSONDataToBoard(boardNumber)
 {
-  for(var i = 0; i < tempJSONStrings.length; i++)
+  for(var j = 0; j < tempJSONStrings.length; j++)
   {
+    console.log(i);
     //Parse the JSON Data with all of the data of this word
-    var JSONData = JSON.parse(tempJSONStrings[i]);
+    var JSONData = JSON.parse(tempJSONStrings[j]);
     //Get the cell that this word starts on based on the x and y it starts of
     var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
     var placementOfWord = JSONData.direction;
@@ -248,4 +249,17 @@ function addCluesToBoard(boardNumber)
     {
        console.log("Error adding the clue for" + JSONData.answer);
     }
+}
+
+
+//This function will read the crossword puzzle as a String
+function readFile()
+{
+  const fs = require('fs')
+
+  fs.readFile('../crosswords/crossword0.txt', (err, data) => {
+      if (err) throw err;
+
+      console.log(data.toString());
+  })
 }
