@@ -5,7 +5,7 @@ var amountOfRowsInGrid = 15;
 
 
 //THIS IS TEMP JUST FOR TESTING REASONS
-var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
+ var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
                         '{ "direction":"Across", "number":6, "x":1, "y":1, "answer":"REPEATS", "hint":"Shows youve seen" }',
                         '{ "direction":"Across", "number":7, "x":9, "y":1, "answer":"NINES", "hint":"Eights arent enough" }',
                         '{ "direction":"Across", "number":9, "x":0, "y":3, "answer":"DIAL", "hint":"Dont touch that __" }',
@@ -37,12 +37,14 @@ var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer
                         '{ "direction":"Down", "number":24, "x":3, "y":11, "answer":"IRON", "hint":"Pumping __" }',
                         '{ "direction":"Down", "number":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
 
-var numberOfBoards = tempJSONStrings.length - 1;
-/* 
-Taking in Json Files to be read locally
-var ReadInJson = require('.data.Json');
+//Taking in Json Files to be read locally
+	//let tempJSONStrings = require('data.json');
+	
+	var numberOfBoards = tempJSONStrings.length - 1;
 
-*/
+
+
+
 
 
 //This function will draw the crossword
