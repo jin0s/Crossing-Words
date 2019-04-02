@@ -37,13 +37,10 @@ var amountOfRowsInGrid = 15;
                         '{ "direction":"Down", "number":24, "x":3, "y":11, "answer":"IRON", "hint":"Pumping __" }',
                         '{ "direction":"Down", "number":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
 
-//Taking in Json Files to be read locally
-	//let tempJSONStrings = require('data.json');
+
 
 	var numberOfBoards = tempJSONStrings.length - 1;
-
-
-
+	
 
 
 
@@ -76,7 +73,7 @@ function addJSONDataToBoard(boardNumber)
 {
   for(var j = 0; j < tempJSONStrings.length; j++)
   {
-    console.log(i);
+    console.log(j);
     //Parse the JSON Data with all of the data of this word
     var JSONData = JSON.parse(tempJSONStrings[j]);
     //Get the cell that this word starts on based on the x and y it starts of
@@ -235,13 +232,13 @@ function addCluesToBoard(boardNumber)
 
     if(direction === "Across")
     {
-        html = '<p class="A' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+        html = '<p class="A ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
         $('#acrossClues').html(html);
     }
 
     else if(direction === "Down")
     {
-        html = '<p class="D' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+        html = '<p class="D ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
         $('#downClues').html(html);
     }
 
@@ -263,3 +260,6 @@ function readFile()
       console.log(data.toString());
   })
 }
+
+
+
