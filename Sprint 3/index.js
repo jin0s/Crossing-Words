@@ -193,7 +193,7 @@ function addCluesToBoard(boardNumber)
 {
     for(var i = 0; i < tempJSONStrings.length; i++) {
         console.log(i);
-        var JSONData = JSON.parse(tempJSONStrings[i]);
+        var JSONData = tempJSONStrings[i];
         var direction = JSONData.direction;
         var html = '';
         if(direction === "Across")
