@@ -73,7 +73,6 @@ function addJSONDataToBoard(boardNumber)
 {
   for(var j = 0; j < tempJSONStrings.length; j++)
   {
-    console.log(j);
     //Parse the JSON Data with all of the data of this word
     var JSONData = JSON.parse(tempJSONStrings[j]);
     //Get the cell that this word starts on based on the x and y it starts of
@@ -253,10 +252,13 @@ function addCluesToBoard(boardNumber)
 function readFile()
 {
   $.ajax({
-    url: "crosswords/crossword0.txt",
+    url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword0.txt",
     async: false,
     success: function (data){
           console.log(data);
+          data = data.replace({"direction":"Across", "number":22, "x":3, "y":8, "answer":"EATS", "hint":"What Weird Al does to "It""}, "");
+          var JSONObject = JSON.parse(data);
+          console.log(JSONObject);
         }
   });
 }
