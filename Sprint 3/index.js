@@ -5,37 +5,7 @@ var amountOfRowsInGrid = 15;
 
 
 //THIS IS TEMP JUST FOR TESTING REASONS
- var tempJSONStrings = ['{ "direction":"Down", "number":22, "x":3, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
-                        '{ "direction":"Across", "number":6, "x":1, "y":1, "answer":"REPEATS", "hint":"Shows youve seen" }',
-                        '{ "direction":"Across", "number":7, "x":9, "y":1, "answer":"NINES", "hint":"Eights arent enough" }',
-                        '{ "direction":"Across", "number":9, "x":0, "y":3, "answer":"DIAL", "hint":"Dont touch that __" }',
-                        '{ "direction":"Across", "number":10, "x":5, "y":3, "answer":"ASTRONOMER", "hint":"Starstruck scientist" }',
-                        '{ "direction":"Across", "number":11, "x":0, "y":5, "answer":"WEIGHING", "hint":"Measuring heaviness" }',
-                        '{ "direction":"Across", "number":13, "x":9, "y":5, "answer":"COUSIN", "hint":"Maybe you can marry" }',
-                        '{ "direction":"Across", "number":15, "x":0, "y":7, "answer":"JAZZ", "hint":"American music" }',
-                        '{ "direction":"Across", "number":17, "x":5, "y":7, "answer":"BOATS", "hint":"Marina sights" }',
-                        '{ "direction":"Across", "number":18, "x":11, "y":7, "answer":"EASE", "hint":"Let out" }',
-                        '{ "direction":"Across", "number":19, "x":0, "y":9, "answer":"PURSES", "hint":"Sums of money" }',
-                        '{ "direction":"Across", "number":20, "x":7, "y":9, "answer":"POSTPONE", "hint":"Give a rain check" }',
-                        '{ "direction":"Across", "number":23, "x":0, "y":11, "answer":"RIDICULOUS", "hint":"Cockamamy" }',
-                        '{ "direction":"Across", "number":26, "x":11, "y":11, "answer":"CAGE", "hint":"Hamsters home" }',
-                        '{ "direction":"Across", "number":27, "x":1, "y":13, "answer":"GHOST", "hint":"Father & son, theres a crowd" }',
-                        '{ "direction":"Across", "number":28, "x":7, "y":13, "answer":"ELEMENT", "hint":"Substance like no other" }',
-                        '{ "direction":"Down", "number":1, "x":3, "y":0, "answer":"APOLOGIZES", "hint":"Makes amends" }',
-                        '{ "direction":"Down", "number":2, "x":5, "y":0, "answer":"HAWAII", "hint":"Baracks home " }',
-                        '{ "direction":"Down", "number":3, "x":7, "y":0, "answer":"ISNT", "hint":"__ it romantic?" }',
-                        '{ "direction":"Down", "number":4, "x":9, "y":0, "answer":"ENFORCES", "hint":"Keeps lawfull" }',
-                        '{ "direction":"Down", "number":5, "x":11, "y":0, "answer":"ONTO", "hint":"Im __ you!" }',
-                        '{ "direction":"Down", "number":6, "x":1, "y":1, "answer":"RAISE", "hint":"Bring up" }',
-                        '{ "direction":"Down", "number":8, "x":13, "y":1, "answer":"SPECIES", "hint":"Variety" }',
-                        '{ "direction":"Down", "number":12, "x":7, "y":5, "answer":"GRASP", "hint":"Hold" }',
-                        '{ "direction":"Down", "number":14, "x":11, "y":5, "answer":"UNEXPECTED", "hint":"Abrupt" }',
-                        '{ "direction":"Down", "number":16, "x":1, "y":7, "answer":"AMUSING", "hint":"Gladdening" }',
-                        '{ "direction":"Down", "number":17, "x":5, "y":7, "answer":"BISCUITS", "hint":"Go with gravy" }',
-                        '{ "direction":"Down", "number":21, "x":9, "y":9, "answer":"SISTER", "hint":"Nun" }',
-                        '{ "direction":"Down", "number":22, "x":13, "y":9, "answer":"NIGHT", "hint":"Dusk to dawn" }',
-                        '{ "direction":"Down", "number":24, "x":3, "y":11, "answer":"IRON", "hint":"Pumping __" }',
-                        '{ "direction":"Down", "number":25, "x":7, "y":11, "answer":"OVER", "hint":"Game __" }' ];
+ var tempJSONStrings = [ ];
 
 
 
@@ -73,9 +43,8 @@ function addJSONDataToBoard(boardNumber)
 {
   for(var j = 0; j < tempJSONStrings.length; j++)
   {
-    console.log(j);
     //Parse the JSON Data with all of the data of this word
-    var JSONData = JSON.parse(tempJSONStrings[j]);
+    var JSONData = tempJSONStrings[j];
     //Get the cell that this word starts on based on the x and y it starts of
     var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
     var placementOfWord = JSONData.direction;
@@ -224,11 +193,19 @@ function newBoard()
 
 function addCluesToBoard(boardNumber)
 {
+<<<<<<< HEAD
     for(var i = 0; i < tempJSONStrings.length; i++) {
         console.log(i);
         var JSONData = JSON.parse(tempJSONStrings[i]);
         var direction = JSONData.direction;
         var html = '';
+=======
+    var JSONData = tempJSONStrings[boardNumber];
+    var direction = JSONData.direction;
+    var html = '';
+    $('#acrossClues').html(html);
+    $('#downClues').html(html);
+>>>>>>> 6c22b1087cb10bed9a4793c85af1fbf51cdb9b02
 
         if(direction === "Across")
         {
@@ -254,11 +231,13 @@ function addCluesToBoard(boardNumber)
 //This function will read the crossword puzzle as a String
 function readFile()
 {
-  const fs = require('fs')
-
-  fs.readFile('../crosswords/crossword0.txt', (err, data) => {
-      if (err) throw err;
-
-      console.log(data.toString());
-  })
+  $.ajax({
+    url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword0.txt",
+    async: false,
+    success: function (data){
+          var JSONObject = JSON.parse(data);
+          tempJSONStrings = JSONObject.clues;
+          newBoard();
+        }
+  });
 }

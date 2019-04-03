@@ -1,4 +1,4 @@
-{
+﻿{
 "title": "Randomly Generated Crossword",
 "by": "#1 POOSD Group",
 "clues":[{"direction":"Down", "number":1, "x":0, "y":0, "answer":"PERE", "hint":"Henri's father"},
@@ -36,7 +36,6 @@
          {"direction":"Down", "number":59, "x":11, "y":14, "answer":"INST", "hint":"Tech., for one"},
          {"direction":"Down", "number":60, "x":12, "y":0, "answer":"SCB", "hint":"Chemist s deg."},
          {"direction":"Down", "number":61, "x":12, "y":1, "answer":"CAA", "hint":"Presidential monogram: 1881–85"},
-         {"direction":"Down", "number":62, "x":12, "y":2, "answer":"ARL", "hint":"Monogram of the author of "Gil Blas""},
          {"direction":"Down", "number":64, "x":12, "y":7, "answer":"SPH", "hint":"Ball shape, in geom. shorthand"},
          {"direction":"Across", "number":1, "x":0, "y":0, "answer":"PCTS", "hint":"Pie chart amts."},
          {"direction":"Across", "number":5, "x":0, "y":5, "answer":"MCCL", "hint":"Date circa founding of the Sorbonne."},
@@ -48,7 +47,6 @@
          {"direction":"Across", "number":18, "x":2, "y":5, "answer":"NNES", "hint":"Compass pts."},
          {"direction":"Across", "number":19, "x":2, "y":10, "answer":"ROCAS", "hint":"Boulders south of the border"},
          {"direction":"Across", "number":20, "x":3, "y":0, "answer":"ELISORS", "hint":"Sheriffs' understudies."},
-         {"direction":"Across", "number":22, "x":3, "y":8, "answer":"EATS", "hint":"What Weird Al does to "It""},
          {"direction":"Across", "number":24, "x":4, "y":3, "answer":"SCOT", "hint":"Clansman."},
          {"direction":"Across", "number":25, "x":4, "y":8, "answer":"RERESTS", "hint":"Relaxes again."},
          {"direction":"Across", "number":29, "x":5, "y":0, "answer":"COCOA", "hint":"Hershey's drink"},
