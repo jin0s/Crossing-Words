@@ -47,7 +47,6 @@
          {"direction":"Across", "number":18, "x":2, "y":5, "answer":"NNES", "hint":"Compass pts."},
          {"direction":"Across", "number":19, "x":2, "y":10, "answer":"ROCAS", "hint":"Boulders south of the border"},
          {"direction":"Across", "number":20, "x":3, "y":0, "answer":"ELISORS", "hint":"Sheriffs' understudies."},
-         {"direction":"Across", "number":22, "x":3, "y":8, "answer":"EATS", "hint":"What Weird Al does to "It""},
          {"direction":"Across", "number":24, "x":4, "y":3, "answer":"SCOT", "hint":"Clansman."},
          {"direction":"Across", "number":25, "x":4, "y":8, "answer":"RERESTS", "hint":"Relaxes again."},
          {"direction":"Across", "number":29, "x":5, "y":0, "answer":"COCOA", "hint":"Hershey's drink"},
