@@ -40,7 +40,7 @@ var amountOfRowsInGrid = 15;
 
 
 	var numberOfBoards = tempJSONStrings.length - 1;
-	
+
 
 
 
@@ -252,14 +252,11 @@ function addCluesToBoard(boardNumber)
 //This function will read the crossword puzzle as a String
 function readFile()
 {
-  const fs = require('fs')
-
-  fs.readFile('../crosswords/crossword0.txt', (err, data) => {
-      if (err) throw err;
-
-      console.log(data.toString());
-  })
+  $.ajax({
+    url: "crosswords/crossword0.txt",
+    async: false,
+    success: function (data){
+          console.log(data);
+        }
+  });
 }
-
-
-
