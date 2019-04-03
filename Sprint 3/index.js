@@ -44,7 +44,7 @@ function addJSONDataToBoard(boardNumber)
   for(var j = 0; j < tempJSONStrings.length; j++)
   {
     //Parse the JSON Data with all of the data of this word
-    var JSONData = JSON.parse(tempJSONStrings[j]);
+    var JSONData = tempJSONStrings[j];
     //Get the cell that this word starts on based on the x and y it starts of
     var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
     var placementOfWord = JSONData.direction;
@@ -193,7 +193,7 @@ function newBoard()
 
 function addCluesToBoard(boardNumber)
 {
-    var JSONData = JSON.parse(tempJSONStrings[boardNumber]);
+    var JSONData = tempJSONStrings[boardNumber];
     var direction = JSONData.direction;
     var html = '';
     $('#acrossClues').html(html);
