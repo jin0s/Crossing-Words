@@ -1,7 +1,7 @@
 {
 "title": "Randomly Generated Crossword",
 "by": "#1 POOSD Group",
-"clues":[{"direction":"Down", "number":1, "x":0, "y":0, "answer":"FRID", "hint":"Vampire player of "Dark Shadows""},
+"clues":[
          {"direction":"Down", "number":2, "x":0, "y":1, "answer":"TEAN", "hint":"Tone, in Troon"},
 		 {"direction":"Down", "number":3, "x":0, "y":2, "answer":"SNNA", "hint":"Arbor and Landers"},
 		 {"direction":"Down", "number":4, "x":0, "y":3, "answer":"RESTIMATE", "hint":"I slept about eight hours?"},

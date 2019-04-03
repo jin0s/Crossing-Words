@@ -7,9 +7,7 @@ var amountOfRowsInGrid = 15;
 //THIS IS TEMP JUST FOR TESTING REASONS
  var tempJSONStrings = [ ];
 //This is the max amount of crosswords we have in the back
-var crosswordAmount = 5;
-
-	var numberOfBoards = tempJSONStrings.length - 1;
+	var numberOfBoards = 5;
 
 
 
@@ -223,6 +221,7 @@ function addCluesToBoard(boardNumber)
 function readFile()
 {
   var boardNumber = Math.floor(Math.random() * numberOfBoards);
+  console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
     async: false,
