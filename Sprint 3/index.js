@@ -193,28 +193,38 @@ function newBoard()
 
 function addCluesToBoard(boardNumber)
 {
+<<<<<<< HEAD
+    for(var i = 0; i < tempJSONStrings.length; i++) {
+        console.log(i);
+        var JSONData = JSON.parse(tempJSONStrings[i]);
+        var direction = JSONData.direction;
+        var html = '';
+=======
     var JSONData = tempJSONStrings[boardNumber];
     var direction = JSONData.direction;
     var html = '';
     $('#acrossClues').html(html);
     $('#downClues').html(html);
+>>>>>>> 6c22b1087cb10bed9a4793c85af1fbf51cdb9b02
 
-    if(direction === "Across")
-    {
-        html = '<p class="A ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
-        $('#acrossClues').html(html);
+        if(direction === "Across")
+        {
+            html = '<p class="A ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+            $('#acrossClues').append(html);
+        }
+
+        else if(direction === "Down")
+        {
+            html = '<p class="D ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
+            $('#downClues').append(html);
+        }
+
+        else
+        {
+           console.log("Error adding the clue for" + JSONData.answer);
+        }
     }
 
-    else if(direction === "Down")
-    {
-        html = '<p class="D ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
-        $('#downClues').html(html);
-    }
-
-    else
-    {
-       console.log("Error adding the clue for" + JSONData.answer);
-    }
 }
 
 
