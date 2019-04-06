@@ -2,15 +2,8 @@
 var amountOfColumnsInGrid = 15;
 var amountOfRowsInGrid = 15;
 
-
-
-//THIS IS TEMP JUST FOR TESTING REASONS
- var tempJSONStrings = [ ];
 //This is the max amount of crosswords we have in the back
 	var numberOfBoards = 5;
-
-
-
 
 //This function will draw the crossword
 function drawCrossword(boardNumber = 5)
@@ -34,6 +27,10 @@ function drawCrossword(boardNumber = 5)
     $('#CrosswordPuzzle').html(html);
     addJSONDataToBoard(boardNumber);
     addCluesToBoard(boardNumber);
+}
+	//checking if tempJSONStrings as value
+	function isEmpty(tempJSONStrings) {
+    return (!tempJSONStrings || 0 === tempJSONStrings.length);
 }
 
 //This function will take the JSON String and add the data to the field
@@ -64,7 +61,8 @@ function addJSONDataToBoard(boardNumber)
       cellToWriteData = cellToWriteData + incrementation;
     }
   }
-  grayOutEmptyCells();
+	grayOutEmptyCells();
+		 
 }
 
 //This function will make all of the cells that dont have a word associated dark gray and untypable
@@ -215,7 +213,6 @@ function addCluesToBoard(boardNumber)
     }
 
 }
-
 
 //This function will read the crossword puzzle as a String
 function readFile()
