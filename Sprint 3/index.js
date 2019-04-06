@@ -191,11 +191,15 @@ function newBoard()
 
 function addCluesToBoard(boardNumber)
 {
+    var html = '';
+    $('#acrossClues').html(html);
+    $('#downClues').html(html);
+
     for(var i = 0; i < tempJSONStrings.length; i++) {
-        console.log(i);
+        //console.log(i);
         var JSONData = tempJSONStrings[i];
         var direction = JSONData.direction;
-        var html = '';
+
         if(direction === "Across")
         {
             html = '<p class="A ' + JSONData.number +'">' + JSONData.number + ". " + JSONData.hint + '</p>';
