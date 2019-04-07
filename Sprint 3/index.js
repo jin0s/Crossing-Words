@@ -3,11 +3,12 @@ var amountOfColumnsInGrid = 15;
 var amountOfRowsInGrid = 15;
 
 //This is the max amount of crosswords we have in the back
-	var numberOfBoards = 5;
+var numberOfBoards = 5;
 
 //This function will draw the crossword
 function drawCrossword(boardNumber = 5)
 {
+
   var html = '';
   //This will be used to number each input from 0...254
   var inputNumber = 0;
@@ -62,7 +63,7 @@ function addJSONDataToBoard(boardNumber)
     }
   }
 	grayOutEmptyCells();
-		 
+
 }
 
 //This function will make all of the cells that dont have a word associated dark gray and untypable
@@ -194,7 +195,6 @@ function addCluesToBoard(boardNumber)
     $('#downClues').html(html);
 
     for(var i = 0; i < tempJSONStrings.length; i++) {
-        //console.log(i);
         var JSONData = tempJSONStrings[i];
         var direction = JSONData.direction;
 
@@ -218,10 +218,91 @@ function addCluesToBoard(boardNumber)
 
 }
 
+
+/*
+ * SAVE AND LOAD FUNCIONALITY
+ *
+ *
+ *
+ *
+ */
+function saveTheBoard(boardNumber) {
+    var charArray = convertTheBoardToCharArray();
+    saveCharArrayToLocalStorage(boardNumber, charArray);
+}
+
+function saveCharArrayToLocalStorage(boardNumber, charArray) {
+    var string = charArray.join("");
+    localStorage.setItem(boardNumber,string);
+}
+
+function convertTheBoardToCharArray()
+{
+    var numberOfCells = amountOfRowsInGrid * amountOfColumnsInGrid;
+    var charArray = new Array();
+
+    // Go through each cell and read what is writen in the text box and save it
+    // as a charArray
+    for(var i = 0 ; i < numberOfCells ; i++)
+    {
+        var inputByPlayer = $('#'+i).val().toUpperCase();
+        var writable = !document.getElementById(i).readOnly;
+
+        // if it is writeableBlock and if there is a character there
+        if(writable && inputByPlayer !== "")
+        {
+            charArray[i] = inputByPlayer;
+        }
+
+        else
+        {
+            charArray[i] = '\0';
+        }
+    }
+
+    return charArray;
+}
+
+function loadTheBoard(boardNumber) {
+
+    // Error check: if theres are no saved boards in local storage just return -1
+    if(localStorage.getItem(boardNumber) === null){
+        return -1;
+    }
+
+    var charArray = loadCharArrayFromLocalStorage(boardNumber);
+    loadCharArrayToBoard(charArray);
+
+    return boardNumber;
+}
+
+function loadCharArrayFromLocalStorage(boardNumber) {
+    var string = localStorage.getItem(boardNumber);
+    return string.split('');
+}
+
+function loadCharArrayToBoard(charArray) {
+    var numberOfCells = amountOfRowsInGrid * amountOfColumnsInGrid;
+
+    // Go through each cell and write the index of charArray into the block
+    for(var i = 0 ; i < numberOfCells ; i++)
+    {
+        var inputByPlayer = $('#'+i).val().toUpperCase();
+        var writable = !document.getElementById(i).readOnly;
+
+        // if it is writeableBlock and if there is a character there write to the cell
+        if(writable && charArray[i] !== '\0')
+        {
+            $("#"+i).val(charArray[i]);
+        }
+    }
+}
+
 //This function will read the crossword puzzle as a String
 function readFile()
 {
-  var boardNumber = Math.floor(Math.random() * numberOfBoards);
+  // var boardNumber = Math.floor(Math.random() * numberOfBoards);
+  var boardNumber = 0;
   console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
