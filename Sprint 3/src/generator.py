@@ -57,7 +57,8 @@ class CrosswordGenerator:
         board = cw.Board(self.size)
         
         #This is placeholder code, just reads in a specification for structure 
-        f = open("sample_structure.txt", "r")
+        rand = np.random.randint(0,30)
+        f = open(f".\structures\\structure{rand}.txt", "r")
         lines = f.read().split('\n')[:-1]
         for line in lines:
             data = line.split(' ')
@@ -67,8 +68,19 @@ class CrosswordGenerator:
             direction = cw.Dir.DOWN if int(data[3]) == 0 else cw.Dir.ACROSS
             length = int(data[4])
             board.set_starting_square(x,y,num,direction, length)
+        self.validate(board)
         return board
     
+    def validate(self, board):
+        for x in range(self.size):
+            for y in range(self.size):
+                if board.start_board[x][y] == -1:
+                    if(x+1 < self.size and board.start_board[x+1][y] == 0):
+                        board.set_empty_square(x+1,y)
+                    if(y+1 < self.size and board.start_board[x][y+1] == 0):
+                        board.set_empty_square(x,y+1)
+        return True
+        
     """
     Function to populate the board with letters
     
@@ -117,7 +129,7 @@ class CrosswordGenerator:
         queues[0].append((0,0))
         index = 0
         
-        #BFS can end seemingly arbitrarily
+        #BFS can end arbitrarily
         while True:
             
             # find the x,y coordinates with the highest priority
@@ -207,7 +219,8 @@ class CrosswordGenerator:
             places += 1
             if(places % 10000 == 0):
                 CrosswordGenerator.print_cells(pc)
-                print()
+                return (None, False)
+                print("RESET")
             
             # pursue the solution with the current cell set
             result = self.backtrack(ind+1, cells, pc)
