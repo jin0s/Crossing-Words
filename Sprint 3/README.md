@@ -48,7 +48,6 @@ We are not storing any user data. Saved crosswords are stored locally on the bro
     6.4.1
     ```
 
-(blow items does not apply)
 # Performance
 
 Right now the Python-based back-end that creates the random crosswords is fairly unoptimized, creating a new crossword once every two minutes. In some cases, there are times where the backtracking takes excessive amounts of time to undo mistakes it made in previous decisions; this results from the source of such mistakes being inherently ambiguous. When backtracking, the program therefore sometimes get stuck in a brute-force loop, where no option available can fix the crossword, so every option is exhaustively tried within a small subsection, dramatically increasing runtime. The performance of the program when this doesn’t occur is fairly reasonable; therefore, the generation program attempts to reset backtracking that seems to spiral or loop excessively over a small section.
@@ -67,15 +66,31 @@ The project also interacts with outside systems, mainly web browsers. The site i
 
 # Internationalization/Localization
 
+There is not a huge need to localize within this project. Crosswords are not nearly as common in other languages as they are in English, as the major crossword providers are mostly American or UK-based. Therefore localization is largely unecessary. Localization could be added to distinguish between clues of American origin versus clues from the UK; however the difference is small and the effort would be largely unecessary.
+
 # Input/Output
+
+The Input and Output for this project is also relatively simple. The User can interact with the Webpage by entering answers into the crossword and then clicking any of the buttons on the site in order to save/load, receive feedback, or check the answers that they entered into the crossword. The only thing that requires significant interaction other than simple information retrieval is the puzzle validation, which is all done client-side with simple validation checks.
 
 # Error Processing
 
+There aren't any expected errors during runtime; and again, because of the limited interaction the user has with the website beyond simple validation checks on the crossword and small information retrieval calls, there isn't a way for user input to break the system. 
+
 # Fault Tolerance
+
+Again, there is not a lot of capacity for runtime errors on the front-end site, due to the limited interactions with the users. There is more likely to be issues on the back-end side, but the extensive testing methods have found and eliminated any need for any sort of try-catch system. The most likely issue is FileNotFound errors, but these errors are impossible to process as the fundamentally break the system. If no structure files are found by the generator, or no crosswords files are found by the website, then there is nothing to show the user and nothing is displayed.
 
 # Architectural Feasibility
 
+Feasibility really wasn't a concern for the front-end portion of this site, as a web-based application was simple enough to construct and would have little to no issues when considering feasibility. The back-end, however, is a different case. The back-end architecture is entirely based around a backtracking algorithm that attempts to randomly construct a crossword. This algorithm functions by placing a letter in each cell based upon a weighted probability, and in accordance to the fact that both answers the cell is a part of are real answers from a repository of clue/answer pairs. This backtracking method's efficiency is entirely based around the structure of the classes that support it in its efforts, but there is a trade-off here: further support classes could improve the pruning in the backtracking method, increasing the speed at which crosswords generate, but they may also add additional overhead. Additionally, it is incredibly hard to see what additional speed ups further back-end architecture may add to the backtracking without extensive testing.
+
+Overall, a fast enough crossword generator is incredibly feasible, but pushing the limits of the system to guarantee every user a unique, never before seen crossword requires very careful thought and trial-and-error processes. The architecture of the system may not warrant such a level of detail, however.
+
 # Overengineering
+
+The risk of overengineering on the front-end is minimal; there are not a lot of additional unwarranted features that could bloat or unecessarily slow down the system. The back-end is similar; it has a very singular (though complex) purpose; but additional features are not at risk of being added.
+
+The complexity of the back-end system itself is the most at risk of being over-engineered; see the architectural feasibility section for more detailed thoughts on why the complexity of the back-end system is in the state it is in now.
 
 # Build-vs-Buy Decisions
 
