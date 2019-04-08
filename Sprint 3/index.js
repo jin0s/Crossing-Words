@@ -332,7 +332,7 @@ function loadCharArrayToBoard(charArray) {
 //This function will read the crossword puzzle as a String
 function readFile()
 {
-  // var boardNumber = Math.floor(Math.random() * numberOfBoards);
+  //var boardNumber = Math.floor(Math.random() * numberOfBoards);
   var boardNumber = 0;
   console.log(boardNumber);
   $.ajax({

@@ -63,7 +63,7 @@
 		 {"direction":"Across", "number":43, "x":8, "y":0, "answer":"ESTEES", "hint":"Actress Chandler and others"},
 		 {"direction":"Across", "number":45, "x":8, "y":7, "answer":"ERE", "hint":"Archaic conjunction."},
 		 {"direction":"Across", "number":46, "x":8, "y":11, "answer":"ADLI", "hint":"Douay spelling of Adlai."},
-		 {"direction":"Across", "number":47, "x":9, "y":0, "answer":"REA", "hint":"Stephen of "Guinevere""},
+		 {"direction":"Across", "number":47, "x":9, "y":0, "answer":"REA", "hint":"Stephen of 'Guinevere'"},
 		 {"direction":"Across", "number":48, "x":9, "y":4, "answer":"AISEN", "hint":"Territory in Chile."},
 		 {"direction":"Across", "number":50, "x":9, "y":10, "answer":"TREYS", "hint":"Slangy three-pointers"},
 		 {"direction":"Across", "number":51, "x":10, "y":0, "answer":"SNOWSOF", "hint":"___ Kilimanjaro"},
