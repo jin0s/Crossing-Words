@@ -5,9 +5,19 @@
 </head>
 <div class="center">
 <body onload="readFile()">
+  <button onclick="readFile();">New</button>
+  <span id="CrosswordNumber" style="margin-left:125px">
+      <!-- Data will be added here from index.js -->
+  </span>
+
+  <br><br>
+
   <div id = "CrosswordPuzzle">
       <!-- Data will be added here from index.js -->
-  </div>
+  </div><br>
+  <button onclick="checkBoard();">Submit</button>
+  <button onclick="saveTheBoard();">Save</button>
+  <button onclick="loadTheBoard(currentBoardNumber);">Load</button>
   <div class = "Clues">
       <div class="across-clue-column">
           <h4 class="clue-lable">Across</h4>
@@ -22,8 +32,8 @@
           </div>
       </div>
   </div>
-  <button onclick="checkBoard();">Submit</button>
-  <button onclick="readFile();">New</button>
+
+
 </body>
 <link rel="stylesheet" href="index.css" type="text/css">
 <script src="index.js"></script>

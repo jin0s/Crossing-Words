@@ -1,12 +1,13 @@
 //This is the size of the board
 var amountOfColumnsInGrid = 15;
 var amountOfRowsInGrid = 15;
+var currentBoardNumber = null;
 
 //This is the max amount of crosswords we have in the back
 var numberOfBoards = 5;
 
 //This function will draw the crossword
-function drawCrossword(boardNumber = 5)
+function drawCrossword(boardNumber)
 {
 
   var html = '';
@@ -42,9 +43,16 @@ function isEmpty(tempJSONStrings)
 	return (!tempJSONStrings || 0 === tempJSONStrings.length);
 }
 
+function displayBoardNumber()
+{
+    $('#CrosswordNumber').html('Crossword ID# ' + currentBoardNumber);
+}
+
 //This function will take the JSON String and add the data to the field
 function addJSONDataToBoard(boardNumber)
 {
+  displayBoardNumber();
+
   var numberLabels = new Set();
 
   for(var j = 0; j < tempJSONStrings.length; j++)
@@ -212,7 +220,7 @@ function getRandomInt(min, max) {
 }
 
 // Function that will pull up a new random board
-function newBoard()
+function getBoardByNumber()
 {
     var randomBoardID = getRandomInt(0, numberOfBoards);
     drawCrossword(randomBoardID);
@@ -257,9 +265,9 @@ function addCluesToBoard(boardNumber)
  *
  *
  */
-function saveTheBoard(boardNumber) {
+function saveTheBoard() {
     var charArray = convertTheBoardToCharArray();
-    saveCharArrayToLocalStorage(boardNumber, charArray);
+    saveCharArrayToLocalStorage(currentBoardNumber, charArray);
 }
 
 function saveCharArrayToLocalStorage(boardNumber, charArray) {
@@ -336,6 +344,8 @@ function readFile(boardNumber)
       var boardNumber = Math.floor(Math.random() * numberOfBoards);
   }
 
+  currentBoardNumber = boardNumber;
+
   console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
@@ -343,7 +353,7 @@ function readFile(boardNumber)
     success: function (data){
           var JSONObject = JSON.parse(data);
           tempJSONStrings = JSONObject.clues;
-          newBoard();
+          drawCrossword();
         }
   });
 }
