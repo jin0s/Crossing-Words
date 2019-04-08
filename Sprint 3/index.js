@@ -336,8 +336,8 @@ function readFile()
   var boardNumber = 0;
   console.log(boardNumber);
   $.ajax({
-    url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
-    //url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/test_crossword.txt",
+    //url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
+    url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/test_crossword.txt",
     async: false,
     success: function (data){
           var JSONObject = JSON.parse(data);
