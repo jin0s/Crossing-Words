@@ -192,13 +192,15 @@ function checkBoard()
     {
       correctLetter.toUpperCase();
     }
+
     //If the word is correct we want to make it green
     if(inputByPlayer === correctLetter)
     {
       $('#'+i).css("background-color", "green");
     }
+
     //If the word is incorrect we want to make it red
-    if(inputByPlayer !== correctLetter && correctLetter !== undefined)
+    if(inputByPlayer !== correctLetter && correctLetter !== undefined  && inputByPlayer !== '')
     {
       $('#'+i).css("background-color", "red");
     }
