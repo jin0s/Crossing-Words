@@ -47,7 +47,7 @@
 {"direction":"Across", "number":17, "x":2, "y":0, "answer":"PARU", "hint":"River of Brazil"},
 {"direction":"Across", "number":18, "x":2, "y":5, "answer":"NAOI", "hint":"Ancient temples"},
 {"direction":"Across", "number":19, "x":2, "y":10, "answer":"CISES", "hint":"Dice-players' sixes: Var."},
-{"direction":"Across", "number":20, "x":3, "y":0, "answer":"CHAINOF", "hint":"Aretha Franklin "___ Fools""},
+{"direction":"Across", "number":20, "x":3, "y":0, "answer":"CHAINOF", "hint":"Aretha Franklin '___ Fools'"},
 {"direction":"Across", "number":22, "x":3, "y":8, "answer":"SILE", "hint":"Strainer sieve: Dial."},
 {"direction":"Across", "number":24, "x":4, "y":3, "answer":"TOFU", "hint":"Blocks in a healthful diet?"},
 {"direction":"Across", "number":25, "x":4, "y":8, "answer":"ONIRING", "hint":"Battered thing that might have made you cry when you cut it"},
