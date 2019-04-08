@@ -16,9 +16,12 @@ Node.js will be used to server the webpage to the user and will communicate with
 They're no limitations this project is open source, and no external sources that will impact the program design.
 
 # User Interface Design
-* Crossword Board and hints
+* Crossword UI and Hint UI
+
 ![alt text](https://github.com/jin0s/Crossing-Words/blob/master/Sprint%203/Design%20Documents/Capture.PNG)
-* Crossword buttons
+
+* Crossword UI buttons
+
 ![alt text](https://github.com/jin0s/Crossing-Words/blob/master/Sprint%203/Design%20Documents/Capture2.PNG)
 
 You should have one or more user interface screens in this section. Each screen should be accompanied by an explaination of the screens purpose and how the user will interact with it. You should relate each screen to one another as the user transitions through the states of your application. You should also have a table that relates each window or component to the support using stories. 
