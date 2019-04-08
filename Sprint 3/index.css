@@ -1,4 +1,14 @@
-.center{
+input {
+	font-size: 17px;
+	font-family: cursive;
+	font-weight: 600;
+	text-transform: capitalize;
+	text-align: center;
+	overflow:hidden;
+}
+
+.center
+{
 	margin: auto;
 	width: 50%;
 	padding: 10px;
@@ -37,8 +47,8 @@
 {
   font-family: "Courier New", Courier, monospace;
   position: relative;
-  left: -20px;
-  top: -11px;
+  left: -22px;
+  top: -12px;
   font-size: 10px;
   margin-left: -6px;
 }
@@ -47,8 +57,8 @@
 {
   font-family: "Courier New", Courier, monospace;
   position: relative;
-  left: -15px;
-  top: -11px;
+  left: -17px;
+  top: -12px;
   font-size: 10px;
   margin-left: -12px;
 }

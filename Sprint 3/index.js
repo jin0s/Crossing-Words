@@ -23,7 +23,7 @@ function drawCrossword(boardNumber = 5)
         $('#acrossClues').append(html);
 		inputNumber++
       }
-	  
+
       //For every row we want to add a break line
       html += '<br>';
     }
@@ -37,7 +37,7 @@ function drawCrossword(boardNumber = 5)
 
 
 	//checking if tempJSONStrings has value
-function isEmpty(tempJSONStrings) 
+function isEmpty(tempJSONStrings)
 {
 	return (!tempJSONStrings || 0 === tempJSONStrings.length);
 }
@@ -337,6 +337,7 @@ function readFile()
   console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
+    //url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/test_crossword.txt",
     async: false,
     success: function (data){
           var JSONObject = JSON.parse(data);
