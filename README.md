@@ -47,6 +47,6 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
     ```
 * Validation Tests for UI: https://docs.google.com/document/d/1L3gZZaVUrWObaSc9bOd9gkVLOY24MreumPI_OTGZgFM/edit?usp=sharing
 
-## Demonstration
+## [Demonstration](https://youtu.be/qhhNe_alrDc)
 
-This is a link to our Youtube video showing our server up and running our code: https://www.youtube.com/watch?v=_oHg13jeh1g
+This is a link to our Youtube video showing our server up and running our code: https://youtu.be/qhhNe_alrDc
