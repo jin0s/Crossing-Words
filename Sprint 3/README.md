@@ -27,9 +27,12 @@ They're no limitations this project is open source, and no external sources that
 You should have one or more user interface screens in this section. Each screen should be accompanied by an explaination of the screens purpose and how the user will interact with it. You should relate each screen to one another as the user transitions through the states of your application. You should also have a table that relates each window or component to the support using stories. 
 
 # Resource Management
+This does not apply to our project (maybe data management)?
 
 # Security
+Does not apply
 
+(blow items does not apply)
 # Performance
 
 # Scalability
@@ -37,6 +40,7 @@ You should have one or more user interface screens in this section. Each screen 
 # Interoperability
 
 # Internationalization/Localization
+
 
 # Input/Output
 
