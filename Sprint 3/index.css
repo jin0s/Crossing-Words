@@ -26,3 +26,23 @@
   display: table;
   clear: both;
 }
+
+.numLabel
+{
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  left: -20px;
+  top: -11px;
+  font-size: 10px;
+  margin-left: -6px;
+}
+
+.numLabelTwoDigit
+{
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  left: -15px;
+  top: -11px;
+  font-size: 10px;
+  margin-left: -12px;
+}

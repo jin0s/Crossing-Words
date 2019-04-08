@@ -37,6 +37,8 @@ function drawCrossword(boardNumber = 5)
 //This function will take the JSON String and add the data to the field
 function addJSONDataToBoard(boardNumber)
 {
+  var numberLabels = new Set();
+
   for(var j = 0; j < tempJSONStrings.length; j++)
   {
     //Parse the JSON Data with all of the data of this word
@@ -44,6 +46,7 @@ function addJSONDataToBoard(boardNumber)
     //Get the cell that this word starts on based on the x and y it starts of
     var cellToWriteData = turnXAndYToInputId(JSONData.x, JSONData.y);
     var placementOfWord = JSONData.direction;
+    var hintNumber = JSONData.number;
     var incrementation = 0;
     //If the word is across we will add data increasing by columns
     if(placementOfWord === "Across")
@@ -58,6 +61,25 @@ function addJSONDataToBoard(boardNumber)
     //For every letter in the word we add a data type with the letter that is supposed to be there
     for(var i = 0; i < JSONData.answer.length; i++)
     {
+      if(i == 0 && !numberLabels.has(hintNumber))
+      {
+          var label;
+          if(hintNumber < 10)
+          {
+            // Add the hint's number label to the crossword
+            label = "<span class=\"numLabel\">" + hintNumber + "</span>"
+          }
+
+          else
+          {
+              label = "<span class=\"numLabelTwoDigit\">" + hintNumber + "</span>"
+          }
+        $('#'+cellToWriteData).after(label);
+
+        // Keep track which numbers have been added so far so we don't add them twice
+        numberLabels.add(hintNumber);
+      }
+
       $('#'+cellToWriteData).attr('data-letter', JSONData.answer.charAt(i));
       cellToWriteData = cellToWriteData + incrementation;
     }
@@ -248,7 +270,7 @@ function convertTheBoardToCharArray()
         var inputByPlayer = $('#'+i).val().toUpperCase();
         var writable = !document.getElementById(i).readOnly;
 
-        // if it is writeableBlock and if there is a character there
+        // if it is writeableBlock and if there is a character in the cell then
         if(writable && inputByPlayer !== "")
         {
             charArray[i] = inputByPlayer;
