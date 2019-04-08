@@ -4,10 +4,10 @@ Populate each section with information as it applies to your project. If a secti
 
 # Program Organization
 
-You should have a diagram of your high level architecture in this section, along with a description of each component and a table that relates each component to one or more user stories.
-
 ## Major Classes
 Link to UML: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
+## System Design
+Link to System Design: https://drive.google.com/file/d/1jLuTz9hMdekggEr7gyuucSSUol9e0XDF/view
 
 # Data Design
 
