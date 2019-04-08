@@ -126,12 +126,12 @@ function turnXAndYToInputId(x,y)
   //Have a variable to hold the id that is going to be associated with this place
   var id = 0;
   //For every row that means that we must count each cell in that row
-  for(i = 0; i < y; i++)
+  for(i = 0; i < x; i++)
   {
     id = id + amountOfRowsInGrid;
   }
   //Have to add all the cells that come before in this row
-  id = id + x;
+  id = id + y;
   //return the id of this input
   return id;
 }
@@ -330,14 +330,15 @@ function loadCharArrayToBoard(charArray) {
 }
 
 //This function will read the crossword puzzle as a String
-function readFile()
+function readFile(boardNumber)
 {
-  // var boardNumber = Math.floor(Math.random() * numberOfBoards);
-  var boardNumber = 0;
+  if(boardNumber == null) {
+      var boardNumber = Math.floor(Math.random() * numberOfBoards);
+  }
+  
   console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
-    //url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/test_crossword.txt",
     async: false,
     success: function (data){
           var JSONObject = JSON.parse(data);
