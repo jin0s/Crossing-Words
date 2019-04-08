@@ -37,6 +37,11 @@ Crossing Words is a crossword puzzle game that will generate a new crossword fro
 ![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%202/Design%20Documents/UI_Diagram.jpg)
 * User Interface
 ![alt text](https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/Design%20Documents/GUI.PNG)
+
+##How user will interact with GUI
+Users will enter a letter into each writeable cell (There is a function on each writable cell which will ensure you only enter one character) and then click submit to check their answers. The cells will turn green if the user is correct or red if the user is incorrect. The user will click on new to get a new crossword.    
+
+
 ### UML
 * Python Crossword Generator UML Diagram: https://drive.google.com/file/d/1p0xWuy4sp1mSsMqn8s_j10ji1tLLKYL1/view?usp=sharing
 
