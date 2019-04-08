@@ -7,3 +7,6 @@ The generation algorithm implemented in CrosswordGenerator can be broken down in
 The remaining classes are for the most part trivial, the Clue and Crossword class exist only to package data in order to keep printing processes out of the main CrosswordGenerator class.
 
 The User stories 15 and 18 are both handled within the ClueRepository class, as that class does the cleanup of the data to ensure that the clues are valid (15), as well as the random selection of the clues to ensure that the clues vary significantly from puzzle to puzzle(18). The remainder of the backend user stories (16,17,19-24) are all handled by the CrosswordGenerator class itself, with the generate_structure() function satisfying 17 and 19-24, and the generate_answers() function satisfying 16.
+
+## How user will interact with GUI
+Users will enter a letter into each writeable cell (There is a function on each writable cell which will ensure you only enter one character) and then click submit to check their answers. The cells will turn green if the user is correct or red if the user is incorrect. The user will click on new to get a new crossword.
