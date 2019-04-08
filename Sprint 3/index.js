@@ -333,7 +333,7 @@ function loadCharArrayToBoard(charArray) {
 function readFile()
 {
   //var boardNumber = Math.floor(Math.random() * numberOfBoards);
-  var boardNumber = 0;
+  var boardNumber = 1;
   console.log(boardNumber);
   $.ajax({
     //url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
