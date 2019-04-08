@@ -61,6 +61,10 @@ The Python based back-end could be sped up significantly by finding a better bac
 
 # Interoperability
 
+The project is composed of two systems, a back-end Python-based backtracking algorithm to construct randomly generated crosswords, and a front-end web-based user interface allowing the user to play the crossword. The crosswords generator will print the crosswords to a file in a format that is easy and efficient for the website to then call up; the crossword prints out text documents that the website interprets as a JSON file containing the specification for the crossword object. The JSON has to be readable, and there are several measures taken by the crossword generator to ensure this is true, such as double quotes being replaced with single quotes as to not break the parser.
+
+The project also interacts with outside systems, mainly web browsers. The site is designed to be simple and engaging, and doesn’t have any parts that would break on any modern browsers with JavaScript enabled.
+
 # Internationalization/Localization
 
 # Input/Output
