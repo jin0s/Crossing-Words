@@ -335,7 +335,7 @@ function readFile(boardNumber)
   if(boardNumber == null) {
       var boardNumber = Math.floor(Math.random() * numberOfBoards);
   }
-  
+
   console.log(boardNumber);
   $.ajax({
     url: "https://raw.githubusercontent.com/jin0s/Crossing-Words/master/Sprint%203/crosswords/crossword"+boardNumber+".txt",
