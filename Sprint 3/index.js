@@ -20,8 +20,10 @@ function drawCrossword(boardNumber = 5)
       {
         //For every column write a block to the crossword
         html += '<input class = "writeableBlock" id = "'+inputNumber+'" onKeyUp = "makeEachCellOneCharacter('+inputNumber+')">';
-        inputNumber++;
+        $('#acrossClues').append(html);
+		inputNumber++
       }
+	  
       //For every row we want to add a break line
       html += '<br>';
     }
@@ -29,9 +31,15 @@ function drawCrossword(boardNumber = 5)
     addJSONDataToBoard(boardNumber);
     addCluesToBoard(boardNumber);
 }
-	//checking if tempJSONStrings as value
-	function isEmpty(tempJSONStrings) {
-    return (!tempJSONStrings || 0 === tempJSONStrings.length);
+
+
+
+
+
+	//checking if tempJSONStrings has value
+function isEmpty(tempJSONStrings) 
+{
+	return (!tempJSONStrings || 0 === tempJSONStrings.length);
 }
 
 //This function will take the JSON String and add the data to the field
@@ -239,6 +247,7 @@ function addCluesToBoard(boardNumber)
     }
 
 }
+
 
 
 /*
