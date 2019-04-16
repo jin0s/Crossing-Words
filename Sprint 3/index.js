@@ -4,7 +4,7 @@ var amountOfRowsInGrid = 15;
 var currentBoardNumber = null;
 
 //This is the max amount of crosswords we have in the back
-var numberOfBoards = 5;
+var numberOfBoards = 11;
 
 //This function will draw the crossword
 function drawCrossword(boardNumber)
@@ -339,11 +339,29 @@ function loadCharArrayToBoard(charArray) {
     }
 }
 
+function newBoard() {
+    var random;
+
+    do {
+        random = getRandomInt(0,numberOfBoards);
+    } while(random == currentBoardNumber);
+
+    localStorage.setItem("lastboard", random);
+
+    readFile(random);
+}
+
 //This function will read the crossword puzzle as a String
 function readFile(boardNumber)
 {
   if(boardNumber == null) {
-      var boardNumber = Math.floor(Math.random() * numberOfBoards);
+      if(localStorage.getItem("lastboard") === null) {
+          boardNumber = Math.floor(Math.random() * numberOfBoards);
+      }
+
+      else if(localStorage.getItem("lastboard") != null) {
+          boardNumber = localStorage.getItem("lastboard");
+      }
   }
 
   currentBoardNumber = boardNumber;
